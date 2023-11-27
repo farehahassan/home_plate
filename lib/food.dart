@@ -3,7 +3,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Food extends StatelessWidget {
-  const Food({super.key});
+  int index;
+  Food({
+    Key? key,
+    required this.index,
+  }) : super(key: key);
+
+  List<String> _namesList = [
+    "Hadija's House",
+    "Zainab's House",
+    "Farah's House"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +32,16 @@ class Food extends StatelessWidget {
             child: Container(
               width: 190.w,
               height: 176.h,
+              margin: EdgeInsets.only(top: 10.h),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25.r),
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(20.sp),
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/images/food1.png",
                   ),
                   filterQuality: FilterQuality.high,
-                  fit: BoxFit.contain,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -38,7 +50,7 @@ class Food extends StatelessWidget {
             height: 5.h,
           ),
           Text(
-            "Chicken Skewers",
+            _namesList[index],
             style: GoogleFonts.aoboshiOne(fontSize: 22.sp),
           ),
           SizedBox(
