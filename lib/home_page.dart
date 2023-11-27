@@ -30,9 +30,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(actions: [
-        Text(
-          "Skip",
-          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w400),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => HomeScreen()));
+          },
+          child: Text(
+            "Skip",
+            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w400),
+          ),
         ),
         SizedBox(
           width: 20.w,
