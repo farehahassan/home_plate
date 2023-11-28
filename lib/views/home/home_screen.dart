@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_plate/food.dart';
+import 'package:home_plate/components/food.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: AssetImage("assets/images/profile.png"),
+                            image: AssetImage("assets/images/home/profile.png"),
                             filterQuality: FilterQuality.high,
                             fit: BoxFit.contain),
                       ),
@@ -160,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                     color: Color(0xffE29A4F),
                     borderRadius: BorderRadius.circular(25.r),
                     image: DecorationImage(
-                        image: AssetImage("assets/images/bg.png"),
+                        image: AssetImage("assets/images/home/bg.png"),
                         alignment: Alignment.topLeft,
                         filterQuality: FilterQuality.high),
                   ),
@@ -199,7 +199,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 125.w,
                                 height: 150.h,
                                 child: Image.asset(
-                                  "assets/images/food.png",
+                                  "assets/images/home/food.png",
                                   filterQuality: FilterQuality.high,
                                   // fit: BoxFit.cover,
                                 ),

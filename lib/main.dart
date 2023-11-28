@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_plate/routes/routes.dart';
+import 'package:home_plate/routes/routes_name.dart';
 
-import 'home_page.dart';
+import 'views/onboarding/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return MaterialApp(
+            onGenerateRoute: CustomRouter.allRoutes,
+            initialRoute: login_screen_route,
             debugShowCheckedModeBanner: false,
             home: HomePage(),
           );

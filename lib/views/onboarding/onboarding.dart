@@ -4,9 +4,11 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_plate/home_screen.dart';
+import 'package:home_plate/views/auth/login_page.dart';
+import 'package:home_plate/views/home/home_screen.dart';
 
-import 'package:home_plate/onboardlist.dart';
+import 'package:home_plate/views/onboarding/onboardlist.dart';
+import 'package:home_plate/routes/routes_name.dart';
 // / import 'package:onboarding/onboardlist.dart';
 
 // import 'package:home_plate/onboardlist.dart';
@@ -109,8 +111,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => HomeScreen()));
+                    Navigator.pushNamed(context, login_screen_route);
                   },
                   child: Container(
                     width: 347.w,
