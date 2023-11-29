@@ -37,6 +37,7 @@ dependencies:
   onboarding: ^3.1.0
   google_fonts: ^6.1.0
   flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/onboard/
+    - assets/images/home/
+    - assets/images/auth/
+    - assets/svgs/social/
+    - assets/svgs/auth/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

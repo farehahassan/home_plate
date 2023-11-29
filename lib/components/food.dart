@@ -4,13 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class Food extends StatelessWidget {
   int index;
   Food({
-    Key? key,
+    super.key,
     required this.index,
-  }) : super(key: key);
+  });
 
+  // ignore: prefer_final_fields
   List<String> _namesList = [
     "Hadija's House",
     "Zainab's House",
@@ -40,7 +42,7 @@ class Food extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.sp),
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/images/food1.png",
+                    "assets/images/home/food1.png",
                   ),
                   filterQuality: FilterQuality.high,
                   fit: BoxFit.cover,

@@ -10,14 +10,14 @@ class OnboardingList {
 List<OnboardingList> pages = [
   OnboardingList(
       title: "Healthy Food",
-      image: "assets/images/onboarding/onboard1.png",
+      image: "assets/images/onboard/onboard1.png",
       discription: "Eat today live another\n memorable day"),
   OnboardingList(
       title: "Tasty Food ",
-      image: "assets/images/onboarding/onboard2.png",
+      image: "assets/images/onboard/onboard2.png",
       discription: "Let's eat some diet food\n while steak to cock"),
   OnboardingList(
       title: "Let's eat",
-      image: "assets/images/onboarding/onboard3.png",
+      image: "assets/images/onboard/onboard3.png",
       discription: "Food is really and truly the\n most effective medicine"),
 ];

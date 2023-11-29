@@ -1,14 +1,14 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, unused_import
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_plate/views/auth/login_page.dart';
-import 'package:home_plate/views/home/home_screen.dart';
-
-import 'package:home_plate/views/onboarding/onboardlist.dart';
 import 'package:home_plate/routes/routes_name.dart';
+// import 'package:home_plate/home_screen.dart';
+
+// import 'package:home_plate/onboardlist.dart';
+import 'package:home_plate/views/home/home_screen.dart';
+import 'package:home_plate/views/onboarding/onboardlist.dart';
 // / import 'package:onboarding/onboardlist.dart';
 
 // import 'package:home_plate/onboardlist.dart';
