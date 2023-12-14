@@ -9,3 +9,4 @@ Color homecolor = Color(0xffFFDEC8);
 Color authContainerOutlineColor = Color(0xff4E4E4E);
 Color black = Colors.black;
 Color white = Colors.white;
+Color borderOutlineColor = Color.fromRGBO(0, 0, 0, 0.294);

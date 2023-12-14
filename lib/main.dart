@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_plate/routes/routes.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/onboarding/onboard.dart';
+import 'package:home_plate/views/base/onboarding/onboard.dart';
 
 // import 'views/onboarding/onboarding.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         builder: (_, child) {
           return MaterialApp(
             onGenerateRoute: CustomRouter.allRoutes,
-            initialRoute: login_screen_route,
+            initialRoute: splash_screen_route,
             debugShowCheckedModeBanner: false,
             home: Onboard(),
           );

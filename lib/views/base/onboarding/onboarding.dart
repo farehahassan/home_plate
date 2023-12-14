@@ -7,8 +7,8 @@ import 'package:home_plate/routes/routes_name.dart';
 // import 'package:home_plate/home_screen.dart';
 
 // import 'package:home_plate/onboardlist.dart';
-import 'package:home_plate/views/home/home_screen.dart';
-import 'package:home_plate/views/onboarding/onboardlist.dart';
+import 'package:home_plate/views/user/home/home_screen.dart';
+import 'package:home_plate/views/base/onboarding/onboardlist.dart';
 // / import 'package:onboarding/onboardlist.dart';
 
 // import 'package:home_plate/onboardlist.dart';
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     )),
                 SizedBox(
-                  height: 28.h,
+                  height: 10.h,
                 ),
                 InkWell(
                   onTap: () {

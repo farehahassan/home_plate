@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/onboarding/onboardlist.dart';
+import 'package:home_plate/views/base/onboarding/onboardlist.dart';
 
 class Onboard extends StatefulWidget {
   const Onboard({super.key});
@@ -162,12 +162,14 @@ class _OnboardState extends State<Onboard> {
 
   Widget _getIndicator(int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10),
-      width: currentIndex == index ? 13.w : 10.w,
-      height: currentIndex == index ? 13.h : 10.h,
+      margin: EdgeInsets.symmetric(horizontal: 5.sp),
+      width: currentIndex == index ? 25.w : 10.w,
+      height: currentIndex == index ? 10.h : 10.h,
       decoration: BoxDecoration(
           color: currentIndex == index ? primarycolor : indicatorlight,
-          shape: BoxShape.circle),
+          borderRadius: currentIndex == index
+              ? BorderRadius.circular(10.r)
+              : BorderRadius.circular(5.r)),
     );
   }
 }

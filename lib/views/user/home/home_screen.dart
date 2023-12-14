@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/components/food.dart';
+import 'package:home_plate/views/user/home/components/discount_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -151,67 +152,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 15.h,
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 15.w, right: 15.w),
-                child: Container(
-                  width: 356.w,
-                  height: 165.h,
-                  decoration: BoxDecoration(
-                    color: Color(0xffE29A4F),
-                    borderRadius: BorderRadius.circular(25.r),
-                    image: DecorationImage(
-                        image: AssetImage("assets/images/home/bg.png"),
-                        alignment: Alignment.topLeft,
-                        filterQuality: FilterQuality.high),
-                  ),
-                  child: Stack(
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
-                            child: Container(
-                              // color: Colors.red,
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "25%",
-                                    style: GoogleFonts.purplePurse(
-                                        fontSize: 30.sp, color: Colors.black),
-                                  ),
-                                  Text(
-                                    "Best discount\n Offer",
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.rancho(
-                                        fontSize: 37.sp,
-                                        letterSpacing: -0.17,
-                                        color: Colors.black),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(right: 10.sp),
-                            child: ClipRRect(
-                              // borderRadius: BorderRadius.circular(20),
-                              child: Container(
-                                width: 125.w,
-                                height: 150.h,
-                                child: Image.asset(
-                                  "assets/images/home/food.png",
-                                  filterQuality: FilterQuality.high,
-                                  // fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              DiscountCard(),
               SizedBox(
                 height: 15.h,
               ),

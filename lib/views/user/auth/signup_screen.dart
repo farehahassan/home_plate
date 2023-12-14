@@ -5,7 +5,7 @@ import 'package:home_plate/components/logo_text.dart';
 import 'package:home_plate/components/orange_button.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/auth/components/custom_text_field.dart';
+import 'package:home_plate/views/user/auth/components/custom_text_field.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -19,7 +19,8 @@ class _SignupScreenState extends State<SignupScreen> {
     "Firstname",
     "Lastname",
     "Email Address",
-    "Password"
+    "Password",
+    "Phone Number"
   ];
   @override
   Widget build(BuildContext context) {

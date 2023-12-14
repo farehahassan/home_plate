@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/auth/components/gt_walsheim_font.dart';
+import 'package:home_plate/views/user/auth/components/gt_walsheim_font.dart';
 
 class SocialCard extends StatelessWidget {
   String text;
@@ -24,7 +24,7 @@ class SocialCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.r),
         color: Colors.white,
         border: Border.all(
-          color: authContainerOutlineColor,
+          color: borderOutlineColor,
         ),
       ),
       child: Padding(

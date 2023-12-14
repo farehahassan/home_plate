@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/auth/components/gt_walsheim_font.dart';
+import 'package:home_plate/views/user/auth/components/gt_walsheim_font.dart';
 
 class CustomTextField extends StatelessWidget {
   String hinttext;
-   CustomTextField({
+  CustomTextField({
     Key? key,
     required this.hinttext,
   }) : super(key: key);
@@ -25,17 +25,17 @@ class CustomTextField extends StatelessWidget {
           contentPadding:
               EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
           hintText: hinttext,
-          hintStyle: GoogleFonts.roboto(
+          hintStyle: GoogleFonts.poppins(
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
-              color: authContainerOutlineColor),
+              color: borderOutlineColor),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.r),
-            borderSide: BorderSide(color: authContainerOutlineColor),
+            borderSide: BorderSide(color: borderOutlineColor),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.r),
-            borderSide: BorderSide(color: authContainerOutlineColor),
+            borderSide: BorderSide(color: borderOutlineColor),
           ),
         ),
       ),
