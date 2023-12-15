@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_plate/components/heading.dart';
-import 'package:home_plate/components/logo_text.dart';
-import 'package:home_plate/components/orange_button.dart';
+import 'package:home_plate/views/base/components/heading.dart';
+import 'package:home_plate/views/base/components/logo_text.dart';
+import 'package:home_plate/views/base/components/orange_button.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/user/auth/components/custom_text_field.dart';
@@ -66,7 +66,7 @@ class _SignupScreenState extends State<SignupScreen> {
               OrangeButton(
                 text: "Sign Up",
                 ontap: () {
-                  Navigator.pushNamed(context, home_screen_route);
+                  Navigator.pushNamed(context, login_page_route);
                 },
               )
             ],
