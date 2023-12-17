@@ -28,25 +28,22 @@ class DiscountCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
-              child: Container(
-                // color: Colors.red,
-                child: Column(
-                  children: [
-                    Text(
-                      "25%",
-                      style: GoogleFonts.purplePurse(
-                          fontSize: 30.sp, color: Colors.black),
-                    ),
-                    Text(
-                      "Best discount\n Offer",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.rancho(
-                          fontSize: 37.sp,
-                          letterSpacing: -0.17,
-                          color: Colors.black),
-                    )
-                  ],
-                ),
+              child: Column(
+                children: [
+                  Text(
+                    "25%",
+                    style: GoogleFonts.purplePurse(
+                        fontSize: 30.sp, color: Colors.black),
+                  ),
+                  Text(
+                    "Best discount\n Offer",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.rancho(
+                        fontSize: 37.sp,
+                        letterSpacing: -0.17,
+                        color: Colors.black),
+                  )
+                ],
               ),
             ),
             Spacer(),
@@ -54,7 +51,7 @@ class DiscountCard extends StatelessWidget {
               padding: EdgeInsets.only(right: 0.sp),
               child: ClipRRect(
                 // borderRadius: BorderRadius.circular(20),
-                child: Container(
+                child: SizedBox(
                   width: 190.w,
                   height: 190.h,
                   child: Image.asset(

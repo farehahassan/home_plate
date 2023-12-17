@@ -11,3 +11,6 @@ const String home_screen_route = "/home_screen";
 const String forgot_screen_route = "/forogt_screen";
 const String enter_code_screen_route = "/enter_code_screen";
 const String change_password_screen_route = "/change_password_screen";
+const String navbar_screen_route = "/navbar_screen_route";
+const String notification_screen_route = "/notification_screen_route";
+const String notification_empty_screen_route = "/notification_empty_screen";

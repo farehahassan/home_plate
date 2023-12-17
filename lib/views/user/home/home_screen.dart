@@ -4,13 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/views/base/components/food.dart';
+import 'package:home_plate/views/user/home/components/country_cuisine_card.dart';
 import 'package:home_plate/views/user/home/components/discount_card.dart';
+import 'package:home_plate/views/user/home/components/see_all_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<String> _country = [
+      "Pakistan",
+      "India",
+      "Brazilian",
+      "Arabic",
+    ];
+    List<String> _image = [
+      "assets/images/home/pakistan.png",
+      "assets/images/home/indian.png",
+      "assets/images/home/brazilian.png",
+      "assets/images/home/arabic.png",
+    ];
     return Scaffold(
       backgroundColor: Color(0xffEFEFEF),
       // appBar: AppBar(
@@ -131,24 +145,32 @@ class HomeScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 15.w, right: 15.w),
-                child: Row(
-                  children: [
-                    Text(
-                      "Special Offers",
-                      style: GoogleFonts.aoboshiOne(
-                          fontSize: 18.sp, fontWeight: FontWeight.w400),
-                    ),
-                    Spacer(),
-                    Text(
-                      "See all",
-                      style: GoogleFonts.roboto(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.orange),
-                    )
-                  ],
+                child: SeeAllText(
+                  text: "Country cuisine",
                 ),
               ),
+              SizedBox(
+                height: 5.h,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(left: 15.w, right: 15.w),
+                  child: Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 4,
+                        // shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          return CountryCuisineCard(
+                            country: _country[index],
+                            image: _image[index],
+                          );
+                        }),
+                  )),
+              Padding(
+                  padding: EdgeInsets.only(left: 15.w, right: 15.w),
+                  child: SeeAllText(
+                    text: "Special Offers",
+                  )),
               SizedBox(
                 height: 15.h,
               ),

@@ -9,6 +9,9 @@ import 'package:home_plate/views/user/auth/Signup/signup_screen.dart';
 import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
+import 'package:home_plate/views/user/home/navbar.dart';
+import 'package:home_plate/views/user/notification/notification_empty.dart';
+import 'package:home_plate/views/user/notification/notification_screen.dart';
 
 class CustomRouter {
   static Route<dynamic> allRoutes(RouteSettings settings) {
@@ -31,6 +34,12 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const EnterCodeScreen());
       case change_password_screen_route:
         return MaterialPageRoute(builder: (_) => const ChangePassScreen());
+      case navbar_screen_route:
+        return MaterialPageRoute(builder: (_) => const NavBar());
+      case notification_screen_route:
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
+      case notification_empty_screen_route:
+        return MaterialPageRoute(builder: (_) => const NotificationEmpty());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));
