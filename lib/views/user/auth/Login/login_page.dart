@@ -5,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/base/components/heading.dart';
-import 'package:home_plate/views/base/components/logo_text.dart';
-import 'package:home_plate/views/base/components/orange_button.dart';
+import 'package:home_plate/views/components/heading.dart';
+import 'package:home_plate/views/components/logo_text.dart';
+import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/auth/components/custom_text_field.dart';
 
 class LoginPage extends StatefulWidget {

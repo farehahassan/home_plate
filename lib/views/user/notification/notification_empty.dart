@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/base/components/custom_appbar.dart';
+import 'package:home_plate/views/components/custom_appbar.dart';
 
 class NotificationEmpty extends StatelessWidget {
   const NotificationEmpty({super.key});
@@ -14,7 +14,7 @@ class NotificationEmpty extends StatelessWidget {
         title: "Notification",
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 19.sp),
+        padding: EdgeInsets.symmetric(horizontal: 19.sp),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/base/components/heading.dart';
+import 'package:home_plate/views/components/heading.dart';
 
 class CartMealCard extends StatelessWidget {
   final String image;

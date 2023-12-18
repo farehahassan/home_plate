@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_plate/views/base/components/custom_appbar.dart';
+import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/user/notification/components/notification_card.dart';
 
 class NotificationScreen extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/base/components/login_components.dart';
-import 'package:home_plate/views/base/components/orange_button.dart';
+import 'package:home_plate/views/components/login_components.dart';
+import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/auth/components/dont_have_account.dart';
 
 class UserLogin extends StatefulWidget {

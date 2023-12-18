@@ -18,7 +18,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/base/components/orange_button.dart';
+import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/cart/components/total_num.dart';
 
 class TotalCode extends StatefulWidget {
