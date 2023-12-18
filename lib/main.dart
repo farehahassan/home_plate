@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes.dart';
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';

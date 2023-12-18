@@ -13,27 +13,32 @@ class NotificationEmpty extends StatelessWidget {
       appBar: CustomAppBar(
         title: "Notification",
       ),
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 60.h,
-          ),
-          Image.asset(
-            "assets/images/home/emptynotification.png",
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            "You don't have any notification at this time",
-            style: GoogleFonts.poppins(
-                fontSize: 14.sp,
-                color: lightblackColor,
-                fontWeight: FontWeight.w400),
-          )
-        ],
+      body: Padding(
+        padding:  EdgeInsets.symmetric(horizontal: 19.sp),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 120.h,
+            ),
+            Image.asset(
+              "assets/images/home/emptynotification.png",
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              "You don't have any notification at this time",
+              style: GoogleFonts.poppins(
+                  fontSize: 14.sp,
+                  color: lightblackColor,
+                  fontWeight: FontWeight.w400),
+            ),
+            Spacer(),
+            // SizedBox(height: 30.h,),
+          ],
+        ),
       ),
     );
   }

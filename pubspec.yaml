@@ -65,10 +65,8 @@ flutter:
     - assets/images/
     - assets/images/onboard/
     - assets/images/home/
-    - assets/images/auth/
     - assets/svgs/social/
     - assets/svgs/auth/
-    - assets/svgs/navbar/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

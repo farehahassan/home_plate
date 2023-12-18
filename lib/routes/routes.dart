@@ -6,6 +6,7 @@ import 'package:home_plate/views/user/auth/Login/login_page.dart';
 import 'package:home_plate/views/user/auth/loginWithSocialApp/login_screen.dart';
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/user/auth/Signup/signup_screen.dart';
+import 'package:home_plate/views/user/cart/cart_screen.dart';
 import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
@@ -40,6 +41,8 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const NotificationScreen());
       case notification_empty_screen_route:
         return MaterialPageRoute(builder: (_) => const NotificationEmpty());
+      case cart_screen_route:
+        return MaterialPageRoute(builder: (_) => const CartScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));
