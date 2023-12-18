@@ -7,12 +7,14 @@ import 'package:home_plate/views/user/auth/loginWithSocialApp/login_screen.dart'
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/user/auth/Signup/signup_screen.dart';
 import 'package:home_plate/views/user/cart/cart_screen.dart';
+import 'package:home_plate/views/user/checkout/checkout_screen.dart';
 import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
 import 'package:home_plate/views/user/home/navbar.dart';
 import 'package:home_plate/views/user/notification/notification_empty.dart';
 import 'package:home_plate/views/user/notification/notification_screen.dart';
+import 'package:home_plate/views/user/payment_method/payment_method_screen.dart';
 
 class CustomRouter {
   static Route<dynamic> allRoutes(RouteSettings settings) {
@@ -43,6 +45,10 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const NotificationEmpty());
       case cart_screen_route:
         return MaterialPageRoute(builder: (_) => const CartScreen());
+      case checkout_screen_route:
+        return MaterialPageRoute(builder: (_) => const CheckOutScreen());
+      case payment_method_screen_route:
+        return MaterialPageRoute(builder: (_) => const PaymentMethodScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

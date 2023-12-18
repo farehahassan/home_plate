@@ -15,3 +15,5 @@ const String navbar_screen_route = "/navbar_screen_route";
 const String notification_screen_route = "/notification_screen_route";
 const String notification_empty_screen_route = "/notification_empty_screen";
 const String cart_screen_route = "/cart_screen";
+const String checkout_screen_route = "/checkout_screen";
+const String payment_method_screen_route = "/payment_method_screen";

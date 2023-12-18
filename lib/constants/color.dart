@@ -16,3 +16,4 @@ Color lightblackColor = Color.fromRGBO(0, 0, 0, 0.60);
 Color greyColor = Color(0xffD9D9D9);
 Color dollarColor = Color(0xff1BAC4B);
 Color cancleColor = Color.fromRGBO(244, 67, 54, 0.8);
+Color lightOrangeColor = Color.fromRGBO(226, 154, 79, 0.2);
