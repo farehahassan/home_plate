@@ -21,15 +21,16 @@ class OrangeButton extends StatelessWidget {
       onTap: ontap,
       child: Container(
         width: 353.w,
-        // height: 55.h,
+        height: 60.h,
         decoration: BoxDecoration(
           color: primarycolor,
           borderRadius: BorderRadius.circular(
             20.sp,
           ),
         ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 140.sp, vertical: 16.sp),
+        child: Center(
+          //  Padding(
+          //   padding: EdgeInsets.symmetric(horizontal: 120.sp, vertical: 16.sp),
           child: Text(
             text,
             style: GoogleFonts.roboto(
