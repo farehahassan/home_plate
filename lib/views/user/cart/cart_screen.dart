@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/base/components/custom_appbar.dart';
+import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/user/cart/components/cart_meal_card.dart';
 import 'package:home_plate/views/user/cart/components/total_code.dart';
 
