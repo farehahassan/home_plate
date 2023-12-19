@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:home_plate/views/user/add_new_Card/add_new_address.dart';
+import 'package:home_plate/views/user/add_new_Card/add_new_card_screen.dart';
+import 'package:home_plate/views/user/address/address_screen.dart';
 import 'package:home_plate/views/user/auth/Forgot/change_pass_screen.dart';
 import 'package:home_plate/views/user/auth/Forgot/enter_code_screen.dart';
 import 'package:home_plate/views/user/auth/Forgot/forgot_screen.dart';
@@ -49,6 +52,12 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const CheckOutScreen());
       case payment_method_screen_route:
         return MaterialPageRoute(builder: (_) => const PaymentMethodScreen());
+      case add_new_card_screen_route:
+        return MaterialPageRoute(builder: (_) => const AddNewCardScreen());
+      case add_new_address_screen_route:
+        return MaterialPageRoute(builder: (_) => const AddNewAddress());
+      case address_screen_route:
+        return MaterialPageRoute(builder: (_) => const AddressScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

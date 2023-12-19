@@ -17,3 +17,6 @@ const String notification_empty_screen_route = "/notification_empty_screen";
 const String cart_screen_route = "/cart_screen";
 const String checkout_screen_route = "/checkout_screen";
 const String payment_method_screen_route = "/payment_method_screen";
+const String add_new_card_screen_route = "/add_new_card_screen";
+const String add_new_address_screen_route = "/add_new_address_screen";
+const String address_screen_route = "/address_screen_route";

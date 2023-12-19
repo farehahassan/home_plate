@@ -5,19 +5,19 @@ import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/add_new_Card/components/info_card_text.dart';
 
-class AddNewCardScreen extends StatefulWidget {
-  const AddNewCardScreen({super.key});
+class AddNewAddress extends StatefulWidget {
+  const AddNewAddress({super.key});
 
   @override
-  State<AddNewCardScreen> createState() => _AddNewCardScreenState();
+  State<AddNewAddress> createState() => _AddNewAddressState();
 }
 
-class _AddNewCardScreenState extends State<AddNewCardScreen> {
+class _AddNewAddressState extends State<AddNewAddress> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: "Add New Card",
+        title: "Add New Address",
       ),
       backgroundColor: scaffoldColor,
       body: SingleChildScrollView(
@@ -29,24 +29,30 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
           child: Column(
             children: [
               InfoCardText(
-                text: "Name on card",
+                text: "Full Name",
               ),
               InfoCardText(
-                text: "Card Number",
+                text: "Last Name",
               ),
               InfoCardText(
-                text: "CVV",
+                text: "Address Line 1",
               ),
               InfoCardText(
-                text: "Expiry Date",
+                text: "Address Line 2",
               ),
               InfoCardText(
-                text: "Zip Code",
+                text: "Town/City",
+              ),
+              InfoCardText(
+                text: "Region/State",
+              ),
+              InfoCardText(
+                text: "Phone Number",
               ),
               SizedBox(
                 height: 20.h,
               ),
-              OrangeButton(text: "Add Card", ontap: () {})
+              OrangeButton(text: "Add Address", ontap: () {})
             ],
           ),
         ),

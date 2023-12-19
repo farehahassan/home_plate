@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
+import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/components/heading.dart';
 
 class AddressCard extends StatelessWidget {
@@ -75,7 +76,9 @@ class AddressCard extends StatelessWidget {
               ],
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, address_screen_route);
+              },
               child: Row(
                 children: [
                   Text(

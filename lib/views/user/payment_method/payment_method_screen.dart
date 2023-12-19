@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_plate/constants/color.dart';
+import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/payment_method/components/new_card_button.dart';
@@ -83,7 +84,11 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               ),
             ),
             Spacer(),
-            NewCardButton(text: "Add New Card", ontap: () {}),
+            NewCardButton(
+                text: "Add New Card",
+                ontap: () {
+                  Navigator.pushNamed(context, add_new_card_screen_route);
+                }),
             SizedBox(
               height: 15.sp,
             ),
