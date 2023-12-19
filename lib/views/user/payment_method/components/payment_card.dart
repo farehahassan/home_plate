@@ -7,7 +7,9 @@ import 'package:home_plate/constants/color.dart';
 class PaymentMethodCard extends StatelessWidget {
   final String svg;
   final String name;
-  const PaymentMethodCard({super.key, required this.svg, required this.name});
+  final Color color;
+  PaymentMethodCard(
+      {super.key, required this.svg, required this.name, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class PaymentMethodCard extends StatelessWidget {
       height: 80.h,
       margin: EdgeInsets.only(bottom: 11.sp),
       decoration: BoxDecoration(
-        color: white,
+        color: color,
         borderRadius: BorderRadius.circular(10.r),
       ),
       child: Padding(

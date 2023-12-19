@@ -15,6 +15,9 @@ class PaymentMethodScreen extends StatefulWidget {
 }
 
 class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
+  bool isSelected1 = true;
+  bool isSelected2 = false;
+  bool isSelected3 = false;
   List<String> _svgs = [
     "assets/svgs/social/visa.svg",
     "assets/svgs/social/paypal.svg",
@@ -37,13 +40,46 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
         ),
         child: Column(
           children: [
-            Column(
-              children: List.generate(
-                3,
-                (index) => PaymentMethodCard(
-                  svg: _svgs[index],
-                  name: _name[index],
-                ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  isSelected1 = true;
+                  isSelected2 = false;
+                  isSelected3 = false;
+                });
+              },
+              child: PaymentMethodCard(
+                svg: _svgs[0],
+                name: _name[0],
+                color: isSelected1 ? primarycolor : white,
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  isSelected1 = false;
+                  isSelected2 = true;
+                  isSelected3 = false;
+                });
+              },
+              child: PaymentMethodCard(
+                svg: _svgs[1],
+                name: _name[1],
+                color: isSelected2 ? primarycolor : white,
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  isSelected1 = false;
+                  isSelected2 = false;
+                  isSelected3 = true;
+                });
+              },
+              child: PaymentMethodCard(
+                svg: _svgs[2],
+                name: _name[2],
+                color: isSelected3 ? primarycolor : white,
               ),
             ),
             Spacer(),
