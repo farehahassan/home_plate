@@ -1,32 +1,26 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:home_plate/constants/color.dart';
 
-// ignore: must_be_immutable
-class Food extends StatelessWidget {
-  int index;
-  Food({
-    super.key,
-    required this.index,
-  });
+class Food extends StatefulWidget {
+  final String name;
+  const Food({super.key, required this.name});
 
-  // ignore: prefer_final_fields
-  List<String> _namesList = [
-    "Hadija's House",
-    "Zainab's House",
-    "Farah's House"
-  ];
+  @override
+  State<Food> createState() => _FoodState();
+}
 
+class _FoodState extends State<Food> {
+  bool isClicked = false;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 210.w,
-      height: 280.h,
+      width: 170.w,
+      // height: 280.h,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(25.r),
+        borderRadius: BorderRadius.circular(15.r),
       ),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.start,
@@ -34,12 +28,12 @@ class Food extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              width: 190.w,
-              height: 176.h,
+              width: 156.w,
+              height: 146.h,
               margin: EdgeInsets.only(top: 10.h),
               decoration: BoxDecoration(
                 color: Colors.red,
-                borderRadius: BorderRadius.circular(20.sp),
+                borderRadius: BorderRadius.circular(15.r),
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/images/home/food1.png",
@@ -54,19 +48,22 @@ class Food extends StatelessWidget {
             height: 5.h,
           ),
           Text(
-            _namesList[index],
+            widget.name,
             style: GoogleFonts.aoboshiOne(fontSize: 22.sp),
           ),
           SizedBox(
             height: 5.h,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.sp),
+            padding: EdgeInsets.symmetric(horizontal: 7.sp),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "2.4 km |",
-                  style: GoogleFonts.roboto(color: Colors.black45),
+                  "2.4 km |   ",
+                  style: GoogleFonts.roboto(
+                      color: Colors.black45, fontSize: 12.sp),
                 ),
                 Icon(
                   Icons.star,
@@ -76,7 +73,72 @@ class Food extends StatelessWidget {
                 Text(
                   "5.9  (2.3k)",
                   style: GoogleFonts.roboto(fontSize: 12.sp),
-                )
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 7.sp),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    // text: 'Home ',
+                    style: DefaultTextStyle.of(context).style,
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '\$',
+                        style: GoogleFonts.aoboshiOne(
+                          fontSize: 10.sp,
+                          color: dollarColor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '8.00',
+                        style: GoogleFonts.aoboshiOne(
+                          fontSize: 14.sp,
+                          color: primarycolor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.pedal_bike_rounded,
+                      color: dollarColor,
+                      size: 16.sp,
+                    ),
+                    Text(
+                      " \$10.00",
+                      style: GoogleFonts.aoboshiOne(
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.w400,
+                        color: primarycolor,
+                      ),
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      isClicked = true;
+                    });
+                  },
+                  icon: isClicked
+                      ? Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        )
+                      : Icon(
+                          Icons.favorite_outline,
+                          color: borderOutlineColor,
+                        ),
+                ),
               ],
             ),
           )

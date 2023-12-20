@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SeeAllText extends StatelessWidget {
   final String text;
-   SeeAllText({super.key, required this.text});
+  VoidCallback? ontap;
+  SeeAllText({super.key, required this.text, this.ontap});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +17,15 @@ class SeeAllText extends StatelessWidget {
               fontSize: 18.sp, fontWeight: FontWeight.w400),
         ),
         Spacer(),
-        Text(
-          "See all",
-          style: GoogleFonts.roboto(
-              fontSize: 14, fontWeight: FontWeight.w500, color: Colors.orange),
+        InkWell(
+          onTap: ontap,
+          child: Text(
+            "See all",
+            style: GoogleFonts.roboto(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.orange),
+          ),
         )
       ],
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/user/notification/components/notification_card.dart';
 
@@ -44,6 +45,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: scaffoldColor,
       appBar: CustomAppBar(
         title: "Notification",
         icon: Icons.delete_outlined,

@@ -25,9 +25,9 @@ class _UserLoginState extends State<UserLogin> {
         ),
         OrangeButton(
           ontap: () {
-            Navigator.pushNamed(context, cart_screen_route);
+            // Navigator.pushNamed(context, cart_screen_route);
             // Navigator.pushNamed(context, home_screen_route);
-            // Navigator.pushNamed(context, navbar_screen_route);
+            Navigator.pushNamed(context, navbar_screen_route);
           },
           text: "Log In",
         ),

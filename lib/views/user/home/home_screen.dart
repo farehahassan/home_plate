@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:home_plate/constants/color.dart';
+import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/components/food.dart';
 import 'package:home_plate/views/user/home/components/country_cuisine_card.dart';
 import 'package:home_plate/views/user/home/components/discount_card.dart';
@@ -13,6 +15,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> _namesList = [
+      "Hadija's House",
+      "Zainab's House",
+      "Farah's House"
+    ];
     List<String> _country = [
       "Pakistan",
       "India",
@@ -83,14 +90,37 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    Container(
-                      width: 45.w,
-                      height: 45.h,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black38),
-                          borderRadius: BorderRadius.circular(15.r)),
-                      child: Center(
-                        child: Icon(Icons.shopping_bag_outlined),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, notification_screen_route);
+                      },
+                      child: Container(
+                        width: 45.w,
+                        height: 45.h,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black38),
+                            borderRadius: BorderRadius.circular(15.r)),
+                        child: Center(
+                          child: Icon(Icons.notifications_outlined),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 5.w,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, cart_screen_route);
+                      },
+                      child: Container(
+                        width: 45.w,
+                        height: 45.h,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black38),
+                            borderRadius: BorderRadius.circular(15.r)),
+                        child: Center(
+                          child: Icon(Icons.shopping_bag_outlined),
+                        ),
                       ),
                     )
                   ],
@@ -113,28 +143,27 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.only(left: 15.w, right: 15.w),
                 child: TextField(
                   decoration: InputDecoration(
-                    prefix: Icon(
+                    prefixIcon: Icon(
                       Icons.search,
-                      size: 20.sp,
-                      color: Colors.black38,
+                      color: borderOutlineColor,
                     ),
                     hintText: "What are you craving?",
                     hintStyle: GoogleFonts.poppins(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black38),
+                        color: borderOutlineColor),
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Colors.black38,
+                          color: borderOutlineColor,
                         ),
                         borderRadius: BorderRadius.circular(15.r)),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Colors.black38,
+                          color: borderOutlineColor,
                         ),
                         borderRadius: BorderRadius.circular(15.r)),
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: borderOutlineColor),
                       borderRadius: BorderRadius.circular(15.r),
                     ),
                   ),
@@ -153,81 +182,63 @@ class HomeScreen extends StatelessWidget {
                 height: 5.h,
               ),
               Padding(
-                  padding: EdgeInsets.only(left: 15.w, right: 15.w),
-                  child: Expanded(
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        // shrinkWrap: true,
-                        itemBuilder: (context, index) {
-                          return CountryCuisineCard(
-                            country: _country[index],
-                            image: _image[index],
-                          );
-                        }),
-                  )),
-              Padding(
-                  padding: EdgeInsets.only(left: 15.w, right: 15.w),
-                  child: SeeAllText(
-                    text: "Special Offers",
-                  )),
-              SizedBox(
-                height: 15.h,
-              ),
-              DiscountCard(),
-              SizedBox(
-                height: 15.h,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 15.w, right: 15.w),
+                padding: EdgeInsets.symmetric(horizontal: 15.sp),
                 child: Row(
-                  children: [
-                    Text(
-                      "Popular Foods",
-                      style: GoogleFonts.aoboshiOne(
-                        fontSize: 18.sp,
-                        color: Colors.black,
-                      ),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(
+                    _image.length,
+                    (index) => CountryCuisineCard(
+                      country: _country[index],
+                      image: _image[index],
                     ),
-                    Spacer(),
-                    Text(
-                      "See all",
-                      style: GoogleFonts.roboto(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.orange),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 4.sp,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.sp,
+                ),
+                child: Column(
+                  children: [
+                    SeeAllText(text: "Order again"),
+                    SizedBox(
+                      height: 6.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Food(
+                          name: _namesList[0],
+                        ),
+                        Food(
+                          name: _namesList[0],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    SeeAllText(
+                      text: "Special Offers",
+                      ontap: () {
+                        Navigator.pushNamed(
+                            context, special_offers_screen_route);
+                      },
+                    ),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    DiscountCard(
+                      bgColor: primarycolor,
+                      discount: "25%",
+                      image: "assets/images/home/0.png",
                     )
                   ],
                 ),
               ),
-              SizedBox(
-                height: 15.h,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Food(
-                      index: 0,
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                    Food(
-                      index: 1,
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                    Food(
-                      index: 2,
-                    ),
-                    SizedBox(
-                      width: 10.w,
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
         ),

@@ -4,9 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/components/custom_appbar.dart';
+import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/components/sub_heading.dart';
 import 'package:home_plate/views/user/checkout/components/address_card.dart';
 import 'package:home_plate/views/user/checkout/components/payment_card.dart';
+import 'package:home_plate/views/user/checkout/components/visa_card.dart';
 
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({super.key});
@@ -89,6 +91,46 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 20.h,
+            ),
+            VisaCard(),
+            SizedBox(
+              height: 18.h,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Total",
+                  style: GoogleFonts.poppins(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500,
+                    color: black,
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  "\$",
+                  style: GoogleFonts.aoboshiOne(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                    color: dollarColor,
+                  ),
+                ),
+                Text(
+                  "60.00",
+                  style: GoogleFonts.aoboshiOne(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w400,
+                    color: black,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            OrangeButton(text: "Confirm Order", ontap: () {})
           ],
         ),
       ),
