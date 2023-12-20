@@ -4,6 +4,7 @@ import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes.dart';
 import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
+import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
 
 // import 'views/onboarding/onboarding.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             onGenerateRoute: CustomRouter.allRoutes,
             initialRoute: splash_screen_route,
             debugShowCheckedModeBanner: false,
-            home: Onboard(),
+            home: SplashScreen(),
           );
         });
   }

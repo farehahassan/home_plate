@@ -57,7 +57,9 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, add_new_card_screen_route);
+                  },
                   child: Container(
                     // margin: EdgeInsets.only(right: 16.sp),
                     width: 70.w,
