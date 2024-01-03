@@ -132,7 +132,11 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             SizedBox(
               height: 20.h,
             ),
-            OrangeButton(text: "Confirm Order", ontap: () {})
+            OrangeButton(
+                text: "Confirm Order",
+                ontap: () {
+                  Navigator.pushNamed(context, successfully_done_screen_route);
+                })
           ],
         ),
       ),

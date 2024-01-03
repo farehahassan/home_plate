@@ -21,3 +21,4 @@ const String add_new_card_screen_route = "/add_new_card_screen";
 const String add_new_address_screen_route = "/add_new_address_screen";
 const String address_screen_route = "/address_screen_route";
 const String special_offers_screen_route = "/special_offers_screen";
+const String successfully_done_screen_route = "/successfullt_done_screen";
