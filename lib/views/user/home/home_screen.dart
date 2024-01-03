@@ -211,11 +211,17 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Food(
-                          name: _namesList[0],
+                          deliveryFee: "20.00",
+                          distance: "3.5",
+                          foodImage: _image[1],
+                          foodName: "Penne Pasta",
+                          price: "10.00",
+                          rating: "4.9",
+                          ratingCount: "2.3k",
                         ),
-                        Food(
-                          name: _namesList[0],
-                        ),
+                        // Food(
+                        //   name: _namesList[0],
+                        // ),
                       ],
                     ),
                     SizedBox(
@@ -235,8 +241,16 @@ class HomeScreen extends StatelessWidget {
                       bgColor: primarycolor,
                       discount: "25%",
                       image: "assets/images/home/0.png",
-                    )
+                    ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.sp,
+                ),
+                child: Column(
+                  children: [SeeAllText(text: "Popular Food")],
                 ),
               ),
             ],

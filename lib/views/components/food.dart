@@ -4,8 +4,23 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 
 class Food extends StatefulWidget {
-  final String name;
-  const Food({super.key, required this.name});
+  final String foodName;
+  final String distance;
+  final String rating;
+  final String ratingCount;
+  final String price;
+  final String deliveryFee;
+  final String foodImage;
+  Food({
+    super.key,
+    required this.foodName,
+    required this.distance,
+    required this.rating,
+    required this.ratingCount,
+    required this.price,
+    required this.deliveryFee,
+    required this.foodImage,
+  });
 
   @override
   State<Food> createState() => _FoodState();
@@ -23,8 +38,8 @@ class _FoodState extends State<Food> {
         borderRadius: BorderRadius.circular(15.r),
       ),
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
             child: Container(
@@ -36,7 +51,7 @@ class _FoodState extends State<Food> {
                 borderRadius: BorderRadius.circular(15.r),
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/images/home/food1.png",
+                    widget.foodImage,
                   ),
                   filterQuality: FilterQuality.high,
                   fit: BoxFit.cover,
@@ -47,9 +62,12 @@ class _FoodState extends State<Food> {
           SizedBox(
             height: 5.h,
           ),
-          Text(
-            widget.name,
-            style: GoogleFonts.aoboshiOne(fontSize: 22.sp),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 7.sp),
+            child: Text(
+              widget.foodName,
+              style: GoogleFonts.aoboshiOne(fontSize: 22.sp),
+            ),
           ),
           SizedBox(
             height: 5.h,
@@ -60,19 +78,102 @@ class _FoodState extends State<Food> {
               mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "2.4 km |   ",
-                  style: GoogleFonts.roboto(
-                      color: Colors.black45, fontSize: 12.sp),
+                Row(
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        // text: 'Home ',
+                        style: DefaultTextStyle.of(context).style,
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: widget.distance,
+                            style: GoogleFonts.roboto(
+                              fontSize: 12.sp,
+                              color: Colors.black45,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          TextSpan(
+                            text: " km",
+                            style: GoogleFonts.roboto(
+                              fontSize: 12.sp,
+                              color: Colors.black45,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // Text(
+                    //   widget.distance,
+                    //   style: GoogleFonts.roboto(
+                    //       color: Colors.black45, fontSize: 12.sp),
+                    // ),
+                    Text(
+                      " |   ",
+                      style: GoogleFonts.roboto(
+                          color: Colors.black45, fontSize: 12.sp),
+                    ),
+                  ],
                 ),
                 Icon(
                   Icons.star,
                   size: 20.sp,
                   color: Colors.amber,
                 ),
-                Text(
-                  "5.9  (2.3k)",
-                  style: GoogleFonts.roboto(fontSize: 12.sp),
+                Row(
+                  children: [
+                    Text(
+                      widget.rating,
+                      style: GoogleFonts.roboto(
+                        fontSize: 12.sp,
+                        color: black,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 3.w,
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        // text: 'Home ',
+                        style: DefaultTextStyle.of(context).style,
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: '(',
+                            style: GoogleFonts.roboto(
+                              fontSize: 12.sp,
+                              color: black,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          TextSpan(
+                            text: widget.ratingCount,
+                            style: GoogleFonts.roboto(
+                              fontSize: 12.sp,
+                              color: black,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          TextSpan(
+                            text: ")",
+                            style: GoogleFonts.roboto(
+                              fontSize: 12.sp,
+                              color: black,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Text(
+                    //   widget.ratingCount,
+                    //   style: GoogleFonts.roboto(
+                    //     fontSize: 12.sp,
+                    //     color: black,
+                    //   ),
+                    // ),
+                  ],
                 ),
               ],
             ),
@@ -96,7 +197,7 @@ class _FoodState extends State<Food> {
                         ),
                       ),
                       TextSpan(
-                        text: '8.00',
+                        text: widget.price,
                         style: GoogleFonts.aoboshiOne(
                           fontSize: 14.sp,
                           color: primarycolor,
@@ -106,23 +207,47 @@ class _FoodState extends State<Food> {
                     ],
                   ),
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.pedal_bike_rounded,
-                      color: dollarColor,
-                      size: 16.sp,
-                    ),
-                    Text(
-                      " \$10.00",
-                      style: GoogleFonts.aoboshiOne(
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.w400,
-                        color: primarycolor,
+                RichText(
+                  text: TextSpan(
+                    // text: 'Home ',
+                    style: DefaultTextStyle.of(context).style,
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '\$',
+                        style: GoogleFonts.aoboshiOne(
+                          fontSize: 10.sp,
+                          color: primarycolor,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                  ],
+                      TextSpan(
+                        text: widget.deliveryFee,
+                        style: GoogleFonts.aoboshiOne(
+                          fontSize: 10.sp,
+                          color: primarycolor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+                // Row(
+                //   children: [
+                //     Icon(
+                //       Icons.pedal_bike_rounded,
+                //       color: dollarColor,
+                //       size: 16.sp,
+                //     ),
+                //     Text(
+                //       " \$10.00",
+                //       style: GoogleFonts.aoboshiOne(
+                //         fontSize: 10.sp,
+                //         fontWeight: FontWeight.w400,
+                //         color: primarycolor,
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 IconButton(
                   onPressed: () {
                     setState(() {
