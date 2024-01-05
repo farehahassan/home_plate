@@ -18,6 +18,7 @@ import 'package:home_plate/views/user/home/navbar.dart';
 import 'package:home_plate/views/user/notification/notification_empty.dart';
 import 'package:home_plate/views/user/notification/notification_screen.dart';
 import 'package:home_plate/views/user/payment_method/payment_method_screen.dart';
+import 'package:home_plate/views/user/profile/edit_profile.dart';
 import 'package:home_plate/views/user/specialOffers/special_offers_screen.dart';
 import 'package:home_plate/views/user/successfully_done/successfully_done.dart';
 
@@ -64,6 +65,8 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const SpecialOffersScreen());
       case successfully_done_screen_route:
         return MaterialPageRoute(builder: (_) => const SuccessfullyDone());
+      case edit_profile_screen_route:
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

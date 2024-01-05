@@ -31,7 +31,10 @@ class _FoodState extends State<Food> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 170.w,
+      margin: EdgeInsets.only(
+        bottom: 10.sp,
+      ),
+      width: 180.w,
       // height: 280.h,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -66,7 +69,7 @@ class _FoodState extends State<Food> {
             padding: EdgeInsets.symmetric(horizontal: 7.sp),
             child: Text(
               widget.foodName,
-              style: GoogleFonts.aoboshiOne(fontSize: 22.sp),
+              style: GoogleFonts.aoboshiOne(fontSize: 20.sp),
             ),
           ),
           SizedBox(
@@ -206,6 +209,14 @@ class _FoodState extends State<Food> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  width: 7.w,
+                ),
+                Icon(
+                  Icons.pedal_bike,
+                  size: 16.sp,
+                  color: dollarColor,
                 ),
                 RichText(
                   text: TextSpan(
