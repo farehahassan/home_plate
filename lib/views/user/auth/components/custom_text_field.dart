@@ -8,14 +8,17 @@ import 'package:home_plate/views/user/auth/components/gt_walsheim_font.dart';
 
 class CustomTextField extends StatelessWidget {
   String hinttext;
+  EdgeInsets? margin;
   CustomTextField({
     Key? key,
     required this.hinttext,
+    this.margin,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: margin,
       width: 353.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
