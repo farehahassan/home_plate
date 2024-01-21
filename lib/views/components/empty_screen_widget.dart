@@ -7,7 +7,7 @@ class EmptyScreen extends StatelessWidget {
   final String vector;
   final String mainText;
   final String subText;
-  EmptyScreen(
+  const EmptyScreen(
       {super.key,
       required this.vector,
       required this.mainText,
@@ -40,12 +40,13 @@ class EmptyScreen extends StatelessWidget {
           ),
           Text(
             subText,
+            textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
                 fontSize: 14.sp,
                 color: lightblackColor,
                 fontWeight: FontWeight.w400),
           ),
-          Spacer(),
+          const Spacer(),
           // SizedBox(height: 30.h,),
         ],
       ),

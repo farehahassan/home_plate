@@ -46,7 +46,7 @@ class _NotificationCardState extends State<NotificationCard> {
               Wrap(
                 direction: Axis.vertical,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 182.w,
                     child: Text(
                       widget.description,

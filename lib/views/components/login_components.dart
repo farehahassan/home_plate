@@ -8,12 +8,12 @@ class LoginComponents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final List<String> _text = [
+     final List<String> text = [
     "Continue With Apple",
     "Continue With Google",
     "Continue With Facebook",
   ];
-  final List<String> _svg = [
+  final List<String> svg = [
     "assets/svgs/social/appleBlack.svg",
     "assets/svgs/social/google.svg",
     "assets/svgs/social/facebook.svg"
@@ -24,8 +24,8 @@ class LoginComponents extends StatelessWidget {
                 return Padding(
                   padding: EdgeInsets.only(bottom: 12.sp),
                   child: SocialCard(
-                    text: _text[index],
-                    svg: _svg[index],
+                    text: text[index],
+                    svg: svg[index],
                   ),
                 );
               }),

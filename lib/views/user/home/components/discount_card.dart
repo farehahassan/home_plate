@@ -20,7 +20,7 @@ class DiscountCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(25.r),
-        image: DecorationImage(
+        image: const DecorationImage(
             image: AssetImage("assets/images/home/bg.png"),
             repeat: ImageRepeat.repeatX,
             // alignment: Alignment.topLeft,
@@ -57,7 +57,7 @@ class DiscountCard extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
             padding: EdgeInsets.only(right: 0.sp),
             child: ClipRRect(

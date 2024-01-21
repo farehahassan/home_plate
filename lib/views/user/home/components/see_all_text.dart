@@ -16,7 +16,7 @@ class SeeAllText extends StatelessWidget {
           style: GoogleFonts.aoboshiOne(
               fontSize: 18.sp, fontWeight: FontWeight.w400),
         ),
-        Spacer(),
+        const Spacer(),
         InkWell(
           onTap: ontap,
           child: Text(

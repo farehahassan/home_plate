@@ -1,9 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_plate/constants/color.dart';
+// import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/base/onboarding/onboard.dart';
+// import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
 
 // import 'views/onboarding/onboarding.dart';

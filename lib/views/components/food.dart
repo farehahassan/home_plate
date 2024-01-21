@@ -11,7 +11,7 @@ class Food extends StatefulWidget {
   final String price;
   final String deliveryFee;
   final String foodImage;
-  Food({
+  const Food({
     super.key,
     required this.foodName,
     required this.distance,
@@ -69,7 +69,7 @@ class _FoodState extends State<Food> {
             padding: EdgeInsets.symmetric(horizontal: 7.sp),
             child: Text(
               widget.foodName,
-              style: GoogleFonts.aoboshiOne(fontSize: 20.sp),
+              style: GoogleFonts.aoboshiOne(fontSize: 18.sp),
             ),
           ),
           SizedBox(
@@ -266,7 +266,7 @@ class _FoodState extends State<Food> {
                     });
                   },
                   icon: isClicked
-                      ? Icon(
+                      ? const Icon(
                           Icons.favorite,
                           color: Colors.red,
                         )

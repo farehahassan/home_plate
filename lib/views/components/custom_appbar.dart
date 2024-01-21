@@ -6,10 +6,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
-  IconData? icon;
+  IconData? firsticon;
+  IconData? secondicon;
+  VoidCallback? firsticontap;
+  VoidCallback? secondicontap;
   final String title;
-  CustomAppBar({super.key, required this.title, this.icon})
-      : preferredSize = Size.fromHeight(kToolbarHeight);
+  CustomAppBar({
+    super.key,
+    required this.title,
+    this.firsticon,
+    this.firsticontap,
+    this.secondicon,
+    this.secondicontap,
+  }) : preferredSize = Size.fromHeight(kToolbarHeight);
   @override
   final Size preferredSize; // default is 56.0
   @override
@@ -20,13 +29,22 @@ class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: scaffoldColor,
+        backgroundColor: scaffoldColor,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: widget.firsticontap,
             icon: Icon(
-              widget.icon,
+              widget.firsticon,
               size: 27.sp,
+              color: black,
+            ),
+          ),
+          IconButton(
+            onPressed: widget.secondicontap,
+            icon: Icon(
+              widget.secondicon,
+              size: 27.sp,
+              color: black,
             ),
           ),
         ],

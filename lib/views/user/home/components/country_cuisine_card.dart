@@ -8,11 +8,11 @@ import 'package:home_plate/constants/color.dart';
 class CountryCuisineCard extends StatelessWidget {
   final String country;
   final String image;
-  CountryCuisineCard({
-    Key? key,
+  const CountryCuisineCard({
+    super.key,
     required this.country,
     required this.image,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

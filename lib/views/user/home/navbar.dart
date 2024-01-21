@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/base/onboarding/onboarding.dart';
 import 'package:home_plate/views/user/chat/chat_screen.dart';
 import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/user/order/order_screen.dart';
@@ -19,25 +18,25 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int currentTab = 0;
   final List<Widget> screens = [
-    HomeScreen(),
-    OrderScreen(),
-    ChatScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const OrderScreen(),
+    const ChatScreen(),
+    const ProfileScreen(),
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = HomeScreen();
+  Widget currentScreen = const HomeScreen();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageStorage(
-        child: currentScreen,
         bucket: bucket,
+        child: currentScreen,
       ),
       bottomNavigationBar: BottomAppBar(
         height: 82.h,
         color: white,
-        child: Container(
+        child: SizedBox(
           height: 80.h,
           width: double.infinity.w,
           child: Row(
@@ -48,7 +47,7 @@ class _NavBarState extends State<NavBar> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = HomeScreen();
+                    currentScreen = const HomeScreen();
                     currentTab = 0;
                   });
                 },
@@ -56,7 +55,7 @@ class _NavBarState extends State<NavBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 19.w,
                       height: 19.w,
                       child: SvgPicture.asset(
@@ -82,7 +81,7 @@ class _NavBarState extends State<NavBar> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = OrderScreen();
+                    currentScreen = const OrderScreen();
                     currentTab = 1;
                   });
                 },
@@ -90,7 +89,7 @@ class _NavBarState extends State<NavBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 19.w,
                       height: 19.w,
                       child: SvgPicture.asset(
@@ -116,7 +115,7 @@ class _NavBarState extends State<NavBar> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = ChatScreen();
+                    currentScreen = const ChatScreen();
                     currentTab = 2;
                   });
                 },
@@ -124,7 +123,7 @@ class _NavBarState extends State<NavBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 19.w,
                       height: 19.w,
                       child: SvgPicture.asset(
@@ -150,7 +149,7 @@ class _NavBarState extends State<NavBar> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = ProfileScreen();
+                    currentScreen = const ProfileScreen();
                     currentTab = 3;
                   });
                 },
@@ -158,7 +157,7 @@ class _NavBarState extends State<NavBar> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 19.w,
                       height: 19.w,
                       child: SvgPicture.asset(

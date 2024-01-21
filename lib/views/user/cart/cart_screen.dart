@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/views/components/custom_appbar.dart';
 import 'package:home_plate/views/user/cart/components/cart_meal_card.dart';
@@ -14,25 +13,25 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  List<String> _image = [
+  final List<String> _image = [
     "assets/images/home/notifood1.png",
     "assets/images/home/notifood2.png",
     "assets/images/home/notifood3.png",
     "assets/images/home/notifood4.png",
   ];
-  List<String> _mainHead = [
+  final List<String> _mainHead = [
     "Mixed Fried Meat",
     "Mixed Chicken",
     "Fried Meat",
     "Mixed Fried Meat",
   ];
-  List<String> _subHead = [
+  final List<String> _subHead = [
     "With Spicy Chicken ",
     "With Spicy Sox ",
     "With French fries",
     "With Spicy Chicken ",
   ];
-  List<String> _price = [
+  final List<String> _price = [
     "15.00",
     "18.00",
     "20.00",
@@ -67,7 +66,7 @@ class _CartScreenState extends State<CartScreen> {
                 },
               ),
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               child: TotalCode(),
             ),
           ],

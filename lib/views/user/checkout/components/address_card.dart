@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/components/heading.dart';
 
 class AddressCard extends StatelessWidget {
   final String main;
@@ -27,7 +26,7 @@ class AddressCard extends StatelessWidget {
               height: 80.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.r),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/images/home/map.png"),
                   fit: BoxFit.cover,
                 ),
@@ -56,7 +55,7 @@ class AddressCard extends StatelessWidget {
                 Wrap(
                   direction: Axis.vertical,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 160.w,
                       child: Text(
                         address,

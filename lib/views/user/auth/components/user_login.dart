@@ -19,7 +19,7 @@ class _UserLoginState extends State<UserLogin> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        LoginComponents(),
+        const LoginComponents(),
         SizedBox(
           height: 33.h,
         ),
@@ -34,7 +34,7 @@ class _UserLoginState extends State<UserLogin> {
         SizedBox(
           height: 13.h,
         ),
-        DontHaveAccount()
+        const DontHaveAccount()
       ],
     );
   }

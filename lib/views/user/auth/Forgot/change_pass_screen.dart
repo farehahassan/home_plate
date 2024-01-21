@@ -25,7 +25,7 @@ class _ChangePassScreenState extends State<ChangePassScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 LogoText(),

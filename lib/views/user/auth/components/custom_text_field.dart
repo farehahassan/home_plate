@@ -4,16 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/views/user/auth/components/gt_walsheim_font.dart';
 
 class CustomTextField extends StatelessWidget {
   String hinttext;
   EdgeInsets? margin;
   CustomTextField({
-    Key? key,
+    super.key,
     required this.hinttext,
     this.margin,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

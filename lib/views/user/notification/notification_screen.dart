@@ -12,31 +12,31 @@ class NotificationScreen extends StatefulWidget {
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
-  List<String> _avatar = [
+  final List<String> _avatar = [
     "assets/images/home/person1.png",
     "assets/images/home/person2.png",
     "assets/images/home/person3.png",
     "assets/images/home/person4.png",
   ];
-  List<String> _day = [
+  final List<String> _day = [
     "Today",
     "Today",
     "Today",
     "Today",
   ];
-  List<String> _description = [
+  final List<String> _description = [
     "Dill sauce, bell peppers, skinless chicken breasts,",
     "Dill sauce, bell peppers, skinless chicken breasts,",
     "Dill sauce, bell peppers, skinless chicken breasts,",
     "Dill sauce, bell peppers, skinless chicken breasts,",
   ];
-  List<String> _time = [
+  final List<String> _time = [
     "10:30 Pm",
     "09:30 Pm",
     "11:30 Pm",
     "10:30 Pm",
   ];
-  List<String> _foodImage = [
+  final List<String> _foodImage = [
     "assets/images/home/notifood1.png",
     "assets/images/home/notifood2.png",
     "assets/images/home/notifood3.png",
@@ -48,7 +48,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       backgroundColor: scaffoldColor,
       appBar: CustomAppBar(
         title: "Notification",
-        icon: Icons.delete_outlined,
+        secondicon: Icons.delete_outlined,
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(

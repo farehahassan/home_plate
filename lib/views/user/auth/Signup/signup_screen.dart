@@ -15,7 +15,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  List<String> _hinttext = [
+  final List<String> _hinttext = [
     "Firstname",
     "Lastname",
     "Email Address",
@@ -33,7 +33,7 @@ class _SignupScreenState extends State<SignupScreen> {
             // mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   LogoText(),

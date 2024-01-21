@@ -35,7 +35,7 @@ class NotificationEmpty extends StatelessWidget {
                   color: lightblackColor,
                   fontWeight: FontWeight.w400),
             ),
-            Spacer(),
+            const Spacer(),
             // SizedBox(height: 30.h,),
           ],
         ),

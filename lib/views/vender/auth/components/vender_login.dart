@@ -19,7 +19,7 @@ class _VendorLoginState extends State<VendorLogin> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        LoginComponents(),
+        const LoginComponents(),
         SizedBox(
           height: 33.h,
         ),
@@ -32,7 +32,7 @@ class _VendorLoginState extends State<VendorLogin> {
         SizedBox(
           height: 13.h,
         ),
-        DontHaveAccount()
+        const DontHaveAccount()
       ],
     );
   }

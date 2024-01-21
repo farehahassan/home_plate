@@ -17,9 +17,9 @@ import 'package:home_plate/views/base/onboarding/onboardlist.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
-    Key? key,
+    super.key,
     // required this.currentIndex,
-  }) : super(key: key);
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         InkWell(
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => HomeScreen()));
+                context, MaterialPageRoute(builder: (_) => const HomeScreen()));
           },
           child: Text(
             "Skip",
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   pages[index].discription,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.roboto(
-                      color: Color(0xffAAAAAA),
+                      color: const Color(0xffAAAAAA),
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w400),
                 ),
@@ -101,8 +101,8 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: currentIndex == index
-                                  ? Color(0xffE29A4F)
-                                  : Color(0xffE7E7E7)),
+                                  ? const Color(0xffE29A4F)
+                                  : const Color(0xffE7E7E7)),
                         ),
                       ),
                     )),
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                     width: 347.w,
                     height: 55.h,
                     decoration: BoxDecoration(
-                      color: Color(0xffE29A4F),
+                      color: const Color(0xffE29A4F),
                       borderRadius: BorderRadius.circular(20.r),
                     ),
                     child: Center(

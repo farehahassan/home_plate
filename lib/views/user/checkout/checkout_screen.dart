@@ -36,7 +36,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             SizedBox(
               height: 10.sp,
             ),
-            AddressCard(
+            const AddressCard(
               main: "Home",
               address: "3517 W. Gray St. Utica, Pennsylvania 57867",
             ),
@@ -96,7 +96,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             SizedBox(
               height: 20.h,
             ),
-            VisaCard(),
+            const VisaCard(),
             SizedBox(
               height: 18.h,
             ),
@@ -110,7 +110,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                     color: black,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "\$",
                   style: GoogleFonts.aoboshiOne(

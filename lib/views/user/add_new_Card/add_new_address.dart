@@ -28,25 +28,25 @@ class _AddNewAddressState extends State<AddNewAddress> {
           ),
           child: Column(
             children: [
-              InfoCardText(
+              const InfoCardText(
                 text: "Full Name",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Last Name",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Address Line 1",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Address Line 2",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Town/City",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Region/State",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Phone Number",
               ),
               SizedBox(

@@ -8,7 +8,7 @@ class PaymentMethodCard extends StatelessWidget {
   final String svg;
   final String name;
   final Color color;
-  PaymentMethodCard(
+  const PaymentMethodCard(
       {super.key, required this.svg, required this.name, required this.color});
 
   @override

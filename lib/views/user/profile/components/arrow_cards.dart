@@ -13,12 +13,12 @@ class ArrowCards extends StatelessWidget {
   final Color color;
   // ignore: non_constant_identifier_names
   ArrowCards({
-    Key? key,
+    super.key,
     required this.ontap,
     required this.settingname,
     required this.svg,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class ArrowCards extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                   // bottom: 20.sp,
                   ),
               width: 45.w,
@@ -62,7 +62,7 @@ class ArrowCards extends StatelessWidget {
                 color: black,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Icon(
               Icons.arrow_forward_ios_rounded,
               color: lightGreyColor,

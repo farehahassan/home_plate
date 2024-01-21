@@ -113,7 +113,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Column(
                 children: [
                   ArrowCards(
-                    ontap: () {},
+                    ontap: () {
+                      Navigator.pushNamed(context, wallet_empty_screen_route);
+                      // Navigator.pushNamed(context, wallet_empty_transaction_screen_route);
+                      // Navigator.pushNamed(context, wallet_screen_route);
+                    },
                     settingname: "E-wallet",
                     svg: "assets/svgs/social/Ewallet.svg",
                     color: Color.fromRGBO(226, 154, 79, 0.1),

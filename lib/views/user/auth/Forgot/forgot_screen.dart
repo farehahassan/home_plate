@@ -28,7 +28,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 LogoText(),
               ],
             ),

@@ -26,9 +26,9 @@ class _SpecialOffersScreenState extends State<SpecialOffersScreen> {
   ];
   List<Color> bgColor = [
     primarycolor,
-    Color(0xff47BE45),
-    Color(0xff593FF4),
-    Color(0xffDFE24F),
+    const Color(0xff47BE45),
+    const Color(0xff593FF4),
+    const Color(0xffDFE24F),
   ];
   @override
   Widget build(BuildContext context) {

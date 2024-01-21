@@ -13,12 +13,12 @@ class NotificationCard extends StatefulWidget {
   final String svg;
   final Color color;
   NotificationCard({
-    Key? key,
+    super.key,
     required this.ontap,
     required this.settingname,
     required this.svg,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   State<NotificationCard> createState() => _NotificationCardState();
@@ -39,7 +39,7 @@ class _NotificationCardState extends State<NotificationCard> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                   // bottom: 20.sp,
                   ),
               width: 45.w,
@@ -69,7 +69,7 @@ class _NotificationCardState extends State<NotificationCard> {
                 color: black,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             FlutterSwitch(
               activeColor: primarycolor,
               width: 48.0.w,

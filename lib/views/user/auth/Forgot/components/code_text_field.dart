@@ -33,7 +33,7 @@ class _CodeTextFieldState extends State<CodeTextField> {
                 fontWeight: FontWeight.w400,
                 color: black,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 focusedBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,
               ),

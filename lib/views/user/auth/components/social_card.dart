@@ -10,10 +10,10 @@ class SocialCard extends StatelessWidget {
   String text;
   String svg;
   SocialCard({
-    Key? key,
+    super.key,
     required this.text,
     required this.svg,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

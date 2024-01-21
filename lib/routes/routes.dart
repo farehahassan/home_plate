@@ -21,6 +21,9 @@ import 'package:home_plate/views/user/payment_method/payment_method_screen.dart'
 import 'package:home_plate/views/user/profile/edit_profile.dart';
 import 'package:home_plate/views/user/specialOffers/special_offers_screen.dart';
 import 'package:home_plate/views/user/successfully_done/successfully_done.dart';
+import 'package:home_plate/views/user/wallet/wallet_empty_screen.dart';
+import 'package:home_plate/views/user/wallet/wallet_empty_transaction.dart';
+import 'package:home_plate/views/user/wallet/wallet_screen.dart';
 
 class CustomRouter {
   static Route<dynamic> allRoutes(RouteSettings settings) {
@@ -67,6 +70,13 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const SuccessfullyDone());
       case edit_profile_screen_route:
         return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+      case wallet_screen_route:
+        return MaterialPageRoute(builder: (_) => const WalletScreen());
+      case wallet_empty_transaction_screen_route:
+        return MaterialPageRoute(
+            builder: (_) => const WalletEmptyTransactionScreen());
+      case wallet_empty_screen_route:
+        return MaterialPageRoute(builder: (_) => const WalletEmptyScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

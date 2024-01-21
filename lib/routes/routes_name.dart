@@ -23,3 +23,7 @@ const String address_screen_route = "/address_screen_route";
 const String special_offers_screen_route = "/special_offers_screen";
 const String successfully_done_screen_route = "/successfullt_done_screen";
 const String edit_profile_screen_route = "/edit_profile_screen";
+const String wallet_screen_route = "/wallet_screen";
+const String wallet_empty_transaction_screen_route =
+    "/wallet_empty_transaction_screen";
+const String wallet_empty_screen_route = "/wallet_empty_screen";

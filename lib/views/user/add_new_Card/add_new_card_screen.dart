@@ -28,19 +28,19 @@ class _AddNewCardScreenState extends State<AddNewCardScreen> {
           ),
           child: Column(
             children: [
-              InfoCardText(
+              const InfoCardText(
                 text: "Name on card",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Card Number",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "CVV",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Expiry Date",
               ),
-              InfoCardText(
+              const InfoCardText(
                 text: "Zip Code",
               ),
               SizedBox(

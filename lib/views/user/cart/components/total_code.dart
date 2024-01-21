@@ -29,13 +29,13 @@ class TotalCode extends StatefulWidget {
 }
 
 class _TotalCodeState extends State<TotalCode> {
-  List<String> _text = [
+  final List<String> _text = [
     "Subtotal",
     "Tex and Fees",
     "Delivery Fees",
     "Total",
   ];
-  List<String> _num = [
+  final List<String> _num = [
     "50.00",
     "5.00",
     "4.00",
@@ -43,7 +43,7 @@ class _TotalCodeState extends State<TotalCode> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 450.h,
       child: Column(
         children: [
@@ -60,7 +60,7 @@ class _TotalCodeState extends State<TotalCode> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Container(
+                SizedBox(
                   width: 200.w,
                   height: 60.h,
                   child: TextFormField(

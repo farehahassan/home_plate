@@ -16,7 +16,7 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  List<String> _fieldText = [
+  final List<String> _fieldText = [
     "First Name",
     "Last Name",
     "Email",
@@ -40,7 +40,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               SizedBox(
                 height: 20.h,
               ),
-              ImageContainer(),
+              const ImageContainer(),
               SizedBox(
                 height: 40.h,
               ),
@@ -68,10 +68,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 child: Padding(
                   padding: EdgeInsets.all(8.0.sp),
                   child: DropdownSearch<String>(
-                    popupProps: PopupProps.menu(
+                    popupProps: const PopupProps.menu(
                       showSelectedItems: true,
                     ),
-                    items: ["Gender", "Female", "Male"],
+                    items: const ["Gender", "Female", "Male"],
 
                     dropdownDecoratorProps: DropDownDecoratorProps(
                       baseStyle: GoogleFonts.poppins(
@@ -79,7 +79,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         fontWeight: FontWeight.w500,
                         color: borderOutlineColor,
                       ),
-                      dropdownSearchDecoration: InputDecoration(),
+                      dropdownSearchDecoration: const InputDecoration(),
                     ),
                     // onChanged: print,
                     selectedItem: "Gender",

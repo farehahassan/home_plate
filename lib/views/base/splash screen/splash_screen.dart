@@ -22,14 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Onboard()));
+          context, MaterialPageRoute(builder: (context) => const Onboard()));
     });
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       setState(() {
         textVisble = true;
       });
     });
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       setState(() {
         isBlack = true;
       });
@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: scaffoldColor,
-      body: Container(
+      body: SizedBox(
         height: double.infinity.h,
         width: double.infinity.w,
         // color: primaryColor,
@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ZoomIn(
-                    delay: Duration(seconds: 0),
+                    delay: const Duration(seconds: 0),
                     child: SvgPicture.asset(
                       "assets/svgs/auth/logo.svg",
                       width: 160.w,

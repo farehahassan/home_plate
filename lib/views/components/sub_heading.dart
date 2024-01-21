@@ -10,15 +10,15 @@ class SubHeading extends StatelessWidget {
   VoidCallback? ontap;
   IconData? icon;
   SubHeading({
-    Key? key,
+    super.key,
     required this.subHeading,
     this.ontap,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity.w,
       child: Row(
         children: [
@@ -30,7 +30,7 @@ class SubHeading extends StatelessWidget {
               color: black,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           InkWell(
             onTap: ontap,
             child: Icon(

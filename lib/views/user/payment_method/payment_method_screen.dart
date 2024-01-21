@@ -19,12 +19,12 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
   bool isSelected1 = true;
   bool isSelected2 = false;
   bool isSelected3 = false;
-  List<String> _svgs = [
+  final List<String> _svgs = [
     "assets/svgs/social/visa.svg",
     "assets/svgs/social/paypal.svg",
     "assets/svgs/social/mastercard.svg",
   ];
-  List<String> _name = [
+  final List<String> _name = [
     "Visa Card",
     "Paypal",
     "Master Card",
@@ -83,7 +83,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                 color: isSelected3 ? primarycolor : white,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             NewCardButton(
                 text: "Add New Card",
                 ontap: () {

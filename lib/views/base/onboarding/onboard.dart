@@ -102,7 +102,7 @@ class _OnboardState extends State<Onboard> {
           // Go to next screen
           int nextPage = currentIndex + 1;
           pageController.animateToPage(nextPage,
-              duration: Duration(milliseconds: 400), curve: Curves.easeInOut);
+              duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
         }
       },
       child: Container(

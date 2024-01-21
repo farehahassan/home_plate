@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:home_plate/constants/color.dart';
-import 'package:home_plate/routes/routes_name.dart';
 
 class ChangeAddress extends StatelessWidget {
   final String main;
@@ -14,14 +12,14 @@ class ChangeAddress extends StatelessWidget {
   final Color textColor;
   final Color mainColor;
   ChangeAddress({
-    Key? key,
+    super.key,
     required this.main,
     required this.subtext,
     required this.ontap,
     required this.color,
     required this.textColor,
     required this.mainColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,7 @@ class ChangeAddress extends StatelessWidget {
                 height: 90.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.r),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: AssetImage("assets/images/home/map.png"),
                     fit: BoxFit.cover,
                   ),
@@ -72,7 +70,7 @@ class ChangeAddress extends StatelessWidget {
                   Wrap(
                     direction: Axis.vertical,
                     children: [
-                      Container(
+                      SizedBox(
                         width: 160.w,
                         child: Text(
                           subtext,

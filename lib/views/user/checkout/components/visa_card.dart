@@ -17,7 +17,7 @@ class VisaCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           20.r,
         ),
-        image: DecorationImage(
+        image: const DecorationImage(
           // alignment: Alignment.centerRight,
           image: AssetImage(
             "assets/images/home/visabg.png",
@@ -97,7 +97,7 @@ class VisaCard extends StatelessWidget {
                     color: white,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 SvgPicture.asset(
                   "assets/svgs/social/visa.svg",
                   color: white,

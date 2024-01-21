@@ -8,12 +8,12 @@ class GtFont extends StatelessWidget {
   Color color;
   FontWeight fontWeight;
   GtFont({
-    Key? key,
+    super.key,
     required this.text,
     required this.fontsize,
     required this.color,
     required this.fontWeight,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

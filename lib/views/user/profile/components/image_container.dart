@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:home_plate/constants/color.dart';
 
 class ImageContainer extends StatefulWidget {
   const ImageContainer({super.key});
@@ -13,7 +12,7 @@ class ImageContainer extends StatefulWidget {
 class _ImageContainerState extends State<ImageContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 130.w,
       height: 130.h,
       // color: black,
