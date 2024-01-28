@@ -114,9 +114,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   ArrowCards(
                     ontap: () {
-                      Navigator.pushNamed(context, wallet_empty_screen_route);
+                      // Navigator.pushNamed(context, wallet_empty_screen_route);
                       // Navigator.pushNamed(context, wallet_empty_transaction_screen_route);
-                      // Navigator.pushNamed(context, wallet_screen_route);
+                      Navigator.pushNamed(context, wallet_screen_route);
                     },
                     settingname: "E-wallet",
                     svg: "assets/svgs/social/Ewallet.svg",

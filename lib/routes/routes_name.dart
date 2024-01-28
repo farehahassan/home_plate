@@ -27,3 +27,7 @@ const String wallet_screen_route = "/wallet_screen";
 const String wallet_empty_transaction_screen_route =
     "/wallet_empty_transaction_screen";
 const String wallet_empty_screen_route = "/wallet_empty_screen";
+const String food_detail_screen_route = "/food_detail_screen";
+const String food_detail_screen_one_route = "/food_detail_screen_one";
+const String review_screen_route = "/review_screen";
+const String rating_screen_route = "/rating_screen";

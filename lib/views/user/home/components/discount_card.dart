@@ -16,7 +16,7 @@ class DiscountCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 15.sp),
-      height: 170.h,
+      // height: 170.h,
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(25.r),

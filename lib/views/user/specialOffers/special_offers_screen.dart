@@ -41,13 +41,15 @@ class _SpecialOffersScreenState extends State<SpecialOffersScreen> {
         padding: EdgeInsets.symmetric(
           horizontal: 20.sp,
         ),
-        child: Column(
-          children: List.generate(
-            image.length,
-            (index) => DiscountCard(
-              bgColor: bgColor[index],
-              discount: discount[index],
-              image: image[index],
+        child: SingleChildScrollView(
+          child: Column(
+            children: List.generate(
+              image.length,
+              (index) => DiscountCard(
+                bgColor: bgColor[index],
+                discount: discount[index],
+                image: image[index],
+              ),
             ),
           ),
         ),
