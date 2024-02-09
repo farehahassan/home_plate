@@ -17,6 +17,7 @@ import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
 import 'package:home_plate/views/user/home/navbar.dart';
+import 'package:home_plate/views/user/invitefriends/invite_friends_screen.dart';
 import 'package:home_plate/views/user/notification/notification_empty.dart';
 import 'package:home_plate/views/user/notification/notification_screen.dart';
 import 'package:home_plate/views/user/payment_method/payment_method_screen.dart';
@@ -89,6 +90,8 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const ReviewScreen());
       case rating_screen_route:
         return MaterialPageRoute(builder: (_) => const RatingScreen());
+      case invite_friends_screen_route:
+        return MaterialPageRoute(builder: (_) => const InviteFriendsScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

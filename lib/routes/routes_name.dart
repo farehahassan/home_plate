@@ -31,3 +31,4 @@ const String food_detail_screen_route = "/food_detail_screen";
 const String food_detail_screen_one_route = "/food_detail_screen_one";
 const String review_screen_route = "/review_screen";
 const String rating_screen_route = "/rating_screen";
+const String invite_friends_screen_route = "/invite_friends_screen";

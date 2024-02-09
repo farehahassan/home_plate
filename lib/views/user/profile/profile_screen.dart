@@ -157,7 +157,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: Color.fromRGBO(244, 67, 54, 0.10),
                   ),
                   ArrowCards(
-                    ontap: () {},
+                    ontap: () {
+                      Navigator.pushNamed(context, invite_friends_screen_route);
+                    },
                     settingname: "Invite Friends",
                     svg: "assets/svgs/social/mulUser.svg",
                     color: Color.fromRGBO(69, 90, 100, 0.10),
