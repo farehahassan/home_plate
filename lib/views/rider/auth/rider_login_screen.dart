@@ -5,14 +5,14 @@ import 'package:home_plate/views/components/login_components.dart';
 import 'package:home_plate/views/components/orange_button.dart';
 import 'package:home_plate/views/user/auth/components/dont_have_account.dart';
 
-class VendorLogin extends StatefulWidget {
-  const VendorLogin({super.key});
+class RiderLogin extends StatefulWidget {
+  const RiderLogin({super.key});
 
   @override
-  State<VendorLogin> createState() => _VendorLoginState();
+  State<RiderLogin> createState() => _RiderLoginState();
 }
 
-class _VendorLoginState extends State<VendorLogin> {
+class _RiderLoginState extends State<RiderLogin> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,7 +25,7 @@ class _VendorLoginState extends State<VendorLogin> {
         ),
         OrangeButton(
           ontap: () {
-            Navigator.pushNamed(context, vender_navbar_route);
+            Navigator.pushNamed(context, rider_navbar_route);
           },
           text: "Log In",
         ),

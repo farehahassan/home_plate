@@ -9,6 +9,7 @@ import 'package:home_plate/views/components/heading.dart';
 import 'package:home_plate/views/components/logo_text.dart';
 // import 'package:home_plate/views/base/components/orange_button.dart';
 import 'package:home_plate/constants/color.dart';
+import 'package:home_plate/views/rider/auth/rider_login_screen.dart';
 // import 'package:home_plate/routes/routes_name.dart';
 // import 'package:home_plate/views/base/onboarding/onboardlist.dart';
 // import 'package:home_plate/views/user/auth/components/dont_have_account.dart';
@@ -24,6 +25,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  Widget screenContent = UserLogin();
+
+  int selectedButtonIndex = 0;
+
   // final pageController = PageController();
   // int currentIndex = 0;
   // void onChanged(int index) {
@@ -31,7 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
   //     currentIndex = index;
   //   });
   // }
-  bool isUserScelected = true;
+
+  //  isUserScelected = true;
 
   // final List<String> _sidetext = ["User side", "Vendor side"];
   @override
@@ -77,63 +83,95 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    TextButton(
-                        onPressed: () {
-                          setState(() {
-                            isUserScelected = true;
-                          });
-                        },
-                        child: Text(
-                          "User side",
-                          style: GoogleFonts.poppins(
-                            fontSize: 18.sp,
-                            fontWeight: isUserScelected
-                                ? FontWeight.w600
-                                : FontWeight.w400,
-                            color: isUserScelected ? primarycolor : greyColor,
-                          ),
-                        )),
-                    TextButton(
-                        onPressed: () {
-                          setState(() {
-                            isUserScelected = false;
-                          });
-                        },
-                        child: Text(
-                          "Vendor side",
-                          style: GoogleFonts.poppins(
-                            fontSize: 18.sp,
-                            fontWeight: isUserScelected
-                                ? FontWeight.w400
-                                : FontWeight.w600,
-                            color: isUserScelected ? greyColor : primarycolor,
-                          ),
-                        )),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          screenContent = UserLogin();
+                          selectedButtonIndex = 0;
+                        });
+                      },
+                      child: Text(
+                        "User side",
+                        style: GoogleFonts.poppins(
+                          fontSize: 18.sp,
+                          fontWeight: selectedButtonIndex == 0
+                              ? FontWeight.w600
+                              : FontWeight.w400,
+                          color: selectedButtonIndex == 0
+                              ? primarycolor
+                              : greyColor,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          screenContent = VendorLogin();
+                          selectedButtonIndex = 1;
+                        });
+                      },
+                      child: Text(
+                        "Vendor side",
+                        style: GoogleFonts.poppins(
+                          fontSize: 18.sp,
+                          fontWeight: selectedButtonIndex == 1
+                              ? FontWeight.w600
+                              : FontWeight.w400,
+                          color: selectedButtonIndex == 1
+                              ? primarycolor
+                              : greyColor,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          screenContent = RiderLogin();
+                          selectedButtonIndex = 2;
+                        });
+                      },
+                      child: Text(
+                        "Rider side",
+                        style: GoogleFonts.poppins(
+                          fontSize: 18.sp,
+                          fontWeight: selectedButtonIndex == 2
+                              ? FontWeight.w600
+                              : FontWeight.w400,
+                          color: selectedButtonIndex == 2
+                              ? primarycolor
+                              : greyColor,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Container(
-                      width: 170.w,
-                      height: isUserScelected ? 5.h : 3.h,
-                      color: isUserScelected ? primarycolor : greyColor,
-                    ),
-                    Container(
-                      width: 170.w,
-                      height: isUserScelected ? 3.h : 5.h,
-                      color: isUserScelected ? greyColor : primarycolor,
-                    ),
-                  ],
-                )
+                // Row(
+                //   children: [
+                //     Container(
+                //       width: 170.w,
+                //       height: isUserScelected ? 5.h : 3.h,
+                //       color: isUserScelected ? primarycolor : greyColor,
+                //     ),
+                //     Container(
+                //       width: 170.w,
+                //       height: isUserScelected ? 3.h : 5.h,
+                //       color: isUserScelected ? greyColor : primarycolor,
+                //     ),
+                //   ],
+                // )
               ],
             ),
             // _buildDotIndicator(),
             SizedBox(
               height: 32.h,
             ),
-            SizedBox(
-              child: isUserScelected ? UserLogin() : VendorLogin(),
-            )
+            // SizedBox(
+            //   child: selectedButtonIndex  ? UserLogin() : VendorLogin(),
+            // )
+            Container(
+              width: double.infinity.w,
+              child: screenContent,
+            ),
           ],
         ),
       ),

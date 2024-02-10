@@ -9,11 +9,13 @@ import 'package:home_plate/constants/color.dart';
 class OrangeButton extends StatelessWidget {
   String text;
   VoidCallback ontap;
+  Border? border;
   OrangeButton({
-    super.key,
+    Key? key,
     required this.text,
     required this.ontap,
-  });
+    this.border,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class OrangeButton extends StatelessWidget {
         width: 353.w,
         height: 60.h,
         decoration: BoxDecoration(
+          border: border,
           color: primarycolor,
           borderRadius: BorderRadius.circular(
             20.sp,

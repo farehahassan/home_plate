@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_plate/views/rider/navbar/rider_navbar.dart';
 import 'package:home_plate/views/user/add_new_Card/add_new_address.dart';
 import 'package:home_plate/views/user/add_new_Card/add_new_card_screen.dart';
 import 'package:home_plate/views/user/address/address_screen.dart';
@@ -29,10 +30,19 @@ import 'package:home_plate/views/user/successfully_done/successfully_done.dart';
 import 'package:home_plate/views/user/wallet/wallet_empty_screen.dart';
 import 'package:home_plate/views/user/wallet/wallet_empty_transaction.dart';
 import 'package:home_plate/views/user/wallet/wallet_screen.dart';
+import 'package:home_plate/views/vender/chat/vender_chat_screen.dart';
+import 'package:home_plate/views/vender/home/vender_home_screen.dart';
+import 'package:home_plate/views/vender/myfoods/vender_foods.dart';
+import 'package:home_plate/views/vender/navbar/vender_navbar.dart';
+import 'package:home_plate/views/vender/notification/vender_notification_screen.dart';
+import 'package:home_plate/views/vender/orders/vender_order_screen.dart';
+import 'package:home_plate/views/vender/profile/vender_profile_screen.dart';
+import 'package:home_plate/views/vender/uploadfood/uploadfood_screen.dart';
 
 class CustomRouter {
   static Route<dynamic> allRoutes(RouteSettings settings) {
     switch (settings.name) {
+      //-------------User Routes----------------
       case splash_screen_route:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case onboarding_screen_route:
@@ -92,6 +102,29 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const RatingScreen());
       case invite_friends_screen_route:
         return MaterialPageRoute(builder: (_) => const InviteFriendsScreen());
+
+      //-----------------Vendor Routes----------------
+      case vender_navbar_route:
+        return MaterialPageRoute(builder: (_) => const VenderNavbar());
+      case vender_chat_screen_route:
+        return MaterialPageRoute(builder: (_) => const VenderChatScreen());
+      case vender_home_screen_route:
+        return MaterialPageRoute(builder: (_) => const VenderHomeScreen());
+      case vender_order_screen_route:
+        return MaterialPageRoute(builder: (_) => const VenderOrderScreen());
+      case vender_profile_screen_route:
+        return MaterialPageRoute(builder: (_) => const VenderProfileScreen());
+      case uploadfood_screen_route:
+        return MaterialPageRoute(builder: (_) => const UploadFoodScreen());
+      case vender_notification_screen_route:
+        return MaterialPageRoute(
+            builder: (_) => const VenderNotificationScreen());
+      case vender_myfood_route:
+        return MaterialPageRoute(builder: (_) => const VenderMyFoods());
+
+      //------------------Rider Routes-----------------
+      case rider_navbar_route:
+        return MaterialPageRoute(builder: (_) => const RiderNavBar());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));
