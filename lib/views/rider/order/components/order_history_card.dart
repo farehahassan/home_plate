@@ -1,17 +1,11 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/views/components/orange_button.dart';
 
-class ActiveCard extends StatelessWidget {
-  VoidCallback? ontap;
-  ActiveCard({
-    Key? key,
-    this.ontap,
-  }) : super(key: key);
+class OrderHistoryCards extends StatelessWidget {
+  const OrderHistoryCards({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -196,36 +190,36 @@ class ActiveCard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: 30.w,
+                          width: 90.w,
                         ),
+                        // InkWell(
+                        //   onTap: () {},
+                        //   child: Container(
+                        //     decoration: BoxDecoration(
+                        //         borderRadius: BorderRadius.circular(
+                        //           10.r,
+                        //         ),
+                        //         border: Border.all(
+                        //           color: greyColor,
+                        //         )),
+                        //     child: Padding(
+                        //       padding: EdgeInsets.symmetric(
+                        //           horizontal: 15.sp, vertical: 5.sp),
+                        //       child: Text(
+                        //         "Reject",
+                        //         style: GoogleFonts.poppins(
+                        //           fontSize: 10.sp,
+                        //           color: greyColor,
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                        // SizedBox(
+                        //   width: 10.w,
+                        // ),
                         InkWell(
                           onTap: () {},
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  10.r,
-                                ),
-                                border: Border.all(
-                                  color: greyColor,
-                                )),
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 15.sp, vertical: 5.sp),
-                              child: Text(
-                                "Reject",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 10.sp,
-                                  color: greyColor,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10.w,
-                        ),
-                        InkWell(
-                          onTap: ontap,
                           child: Container(
                             decoration: BoxDecoration(
                               color: primarycolor,
@@ -237,7 +231,7 @@ class ActiveCard extends StatelessWidget {
                               padding: EdgeInsets.symmetric(
                                   horizontal: 15.sp, vertical: 5.sp),
                               child: Text(
-                                "Accept",
+                                "Delivered",
                                 style: GoogleFonts.poppins(
                                   fontSize: 10.sp,
                                   color: white,

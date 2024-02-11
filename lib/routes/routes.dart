@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:home_plate/views/rider/acceptorder/rider_accept_order_screen.dart';
+import 'package:home_plate/views/rider/earnings/rider_earning_screen.dart';
 import 'package:home_plate/views/rider/navbar/rider_navbar.dart';
+import 'package:home_plate/views/rider/order/rider_order_screen.dart';
 import 'package:home_plate/views/user/add_new_Card/add_new_address.dart';
 import 'package:home_plate/views/user/add_new_Card/add_new_card_screen.dart';
 import 'package:home_plate/views/user/address/address_screen.dart';
@@ -36,6 +39,7 @@ import 'package:home_plate/views/vender/myfoods/vender_foods.dart';
 import 'package:home_plate/views/vender/navbar/vender_navbar.dart';
 import 'package:home_plate/views/vender/notification/vender_notification_screen.dart';
 import 'package:home_plate/views/vender/orders/vender_order_screen.dart';
+import 'package:home_plate/views/vender/paymenthistory/vender_payment_history.dart';
 import 'package:home_plate/views/vender/profile/vender_profile_screen.dart';
 import 'package:home_plate/views/vender/uploadfood/uploadfood_screen.dart';
 
@@ -121,10 +125,19 @@ class CustomRouter {
             builder: (_) => const VenderNotificationScreen());
       case vender_myfood_route:
         return MaterialPageRoute(builder: (_) => const VenderMyFoods());
+      case vender_payment_history_route:
+        return MaterialPageRoute(builder: (_) => const VenderPaymentHistory());
 
       //------------------Rider Routes-----------------
       case rider_navbar_route:
         return MaterialPageRoute(builder: (_) => const RiderNavBar());
+      case rider_order_screen_route:
+        return MaterialPageRoute(builder: (_) => const RiderOrderScreen());
+      case rider_accept_order_screen_route:
+        return MaterialPageRoute(
+            builder: (_) => const RiderAcceptOrderScreen());
+      case rider_earning_screen_route:
+        return MaterialPageRoute(builder: (_) => const RiderEarningScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const Text("Page Not Found"));

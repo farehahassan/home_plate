@@ -3,8 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 import 'package:home_plate/routes/routes_name.dart';
-import 'package:home_plate/views/user/notification/components/notification_card.dart';
+import 'package:home_plate/views/rider/custombar/rider_appbar.dart';
+// import 'package:home_plate/views/user/notification/components/notification_card.dart';
+// import 'package:home_plate/views/user/notification/components/notification_card.dart';
 import 'package:home_plate/views/user/profile/components/arrow_cards.dart';
+import 'package:home_plate/views/user/profile/components/notification_card.dart';
 
 class RiderProfileScreen extends StatefulWidget {
   const RiderProfileScreen({super.key});
@@ -17,10 +20,13 @@ class _RiderProfileScreenState extends State<RiderProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: RiderAppBar(
+        center: true,
+      ),
       backgroundColor: scaffoldColor,
       body: Padding(
         padding: EdgeInsets.only(
-          top: 60.sp,
+          // top: 60.sp,
           // vertical: 60.sp,
           left: 18.sp,
           right: 18.sp,
@@ -103,7 +109,7 @@ class _RiderProfileScreenState extends State<RiderProfileScreen> {
               Container(
                 width: double.infinity.w,
                 height: 0.5.h,
-                color: lightblackColor,
+                color: greyColor,
               ),
               SizedBox(
                 height: 19.h,
@@ -114,9 +120,9 @@ class _RiderProfileScreenState extends State<RiderProfileScreen> {
                     ontap: () {
                       // Navigator.pushNamed(context, wallet_empty_screen_route);
                       // Navigator.pushNamed(context, wallet_empty_transaction_screen_route);
-                      Navigator.pushNamed(context, wallet_screen_route);
+                      Navigator.pushNamed(context, rider_earning_screen_route);
                     },
-                    settingname: "E-wallet",
+                    settingname: "My Earnings",
                     svg: "assets/svgs/social/Ewallet.svg",
                     color: Color.fromRGBO(226, 154, 79, 0.1),
                   ),
@@ -136,32 +142,32 @@ class _RiderProfileScreenState extends State<RiderProfileScreen> {
                     svg: "assets/svgs/social/location.svg",
                     color: Color.fromRGBO(27, 172, 75, 0.1),
                   ),
-                  ArrowCards(
-                    ontap: () {},
-                    settingname: "My Favorite",
-                    svg: "assets/svgs/social/Heart.svg",
-                    color: Color.fromRGBO(244, 67, 54, 0.10),
-                  ),
-                  // NotificationCard(
+                  // ArrowCards(
                   //   ontap: () {},
-                  //   settingname: "Notification",
-                  //   svg: "assets/svgs/social/notification.svg",
-                  //   color: Color.fromRGBO(0, 99, 247, 0.10),
+                  //   settingname: "My Favorite",
+                  //   svg: "assets/svgs/social/Heart.svg",
+                  //   color: Color.fromRGBO(244, 67, 54, 0.10),
                   // ),
+                  NotificationCard(
+                    ontap: () {},
+                    settingname: "Notification",
+                    svg: "assets/svgs/social/notification.svg",
+                    color: Color.fromRGBO(0, 99, 247, 0.10),
+                  ),
                   ArrowCards(
                     ontap: () {},
                     settingname: "Language",
                     svg: "assets/svgs/social/globe.svg",
                     color: Color.fromRGBO(244, 67, 54, 0.10),
                   ),
-                  ArrowCards(
-                    ontap: () {
-                      Navigator.pushNamed(context, invite_friends_screen_route);
-                    },
-                    settingname: "Invite Friends",
-                    svg: "assets/svgs/social/mulUser.svg",
-                    color: Color.fromRGBO(69, 90, 100, 0.10),
-                  ),
+                  // ArrowCards(
+                  //   ontap: () {
+                  //     Navigator.pushNamed(context, invite_friends_screen_route);
+                  //   },
+                  //   settingname: "Invite Friends",
+                  //   svg: "assets/svgs/social/mulUser.svg",
+                  //   color: Color.fromRGBO(69, 90, 100, 0.10),
+                  // ),
                   ArrowCards(
                     ontap: () {},
                     settingname: "Help Center",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:home_plate/constants/color.dart';
 
@@ -11,6 +12,8 @@ class MyFoodCard extends StatefulWidget {
 }
 
 class _MyFoodCardState extends State<MyFoodCard> {
+  bool status = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -124,7 +127,7 @@ class _MyFoodCardState extends State<MyFoodCard> {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Row(
                   children: [
@@ -148,13 +151,43 @@ class _MyFoodCardState extends State<MyFoodCard> {
                         ),
                       ],
                     ),
-                    Text(
-                      "Publish",
-                      style: GoogleFonts.poppins(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w500,
-                        color: lightGreyColor,
-                      ),
+                    SizedBox(
+                      width: 50.h,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Publish",
+                          style: GoogleFonts.poppins(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w500,
+                            color: lightGreyColor,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        FlutterSwitch(
+                          // toggleColor: Colors.green,
+
+                          activeColor: Colors.green.shade300,
+                          width: 34.0.w,
+                          height: 16.0.h,
+                          // valueFontSize: 25.0,
+                          toggleSize: 15.0,
+                          value: status,
+                          borderRadius: 15.0,
+                          padding: 0.0,
+                          // showOnOff: true,
+                          onToggle: (val) {
+                            setState(
+                              () {
+                                status = val;
+                              },
+                            );
+                          },
+                        ),
+                      ],
                     ),
                   ],
                 )

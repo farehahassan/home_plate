@@ -161,6 +161,31 @@ class _LoginScreenState extends State<LoginScreen> {
                 // )
               ],
             ),
+            SizedBox(
+              height: 10.h,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 110.w,
+                  height: 3.h,
+                  color: primarycolor,
+                ),
+                Container(
+                  width: 110.w,
+                  height: 3.h,
+                  color: primarycolor,
+                ),
+                Container(
+                  width: 110.w,
+                  height: 3.h,
+                  color: primarycolor,
+                ),
+              ],
+            ),
+
             // _buildDotIndicator(),
             SizedBox(
               height: 32.h,

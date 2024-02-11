@@ -122,7 +122,8 @@ class _VenderProfileScreenState extends State<VenderProfileScreen> {
                   ),
                   ArrowCards(
                     ontap: () {
-                      Navigator.pushNamed(context, payment_method_screen_route);
+                      Navigator.pushNamed(
+                          context, vender_payment_history_route);
                     },
                     settingname: "Payment History",
                     svg: "assets/svgs/social/payment.svg",

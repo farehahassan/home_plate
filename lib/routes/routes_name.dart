@@ -44,8 +44,12 @@ const String vender_order_screen_route = "/vender_order_screen";
 const String uploadfood_screen_route = "/uploadfood_screen";
 const String vender_notification_screen_route = "/vender_notification_screen";
 const String vender_myfood_route = "/vender_myfood_route";
+const String vender_payment_history_route = "/vender_payment_history";
 
 //------------------Rider Routes-----------------
 const String rider_login_screen_route = "/rider_login_screen";
-
 const String rider_navbar_route = "/rider_navbar";
+const String rider_order_screen_route = "/rider_order_screen";
+const String rider_accept_order_screen_route = "/rider_accept_order_screen";
+const String rider_chat_screen_route = "/rider_chat_screen";
+const String rider_earning_screen_route = "/rider_earning_screen";
