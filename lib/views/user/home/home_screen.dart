@@ -294,6 +294,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SeeAllText(
                       text: "Popular Foods",
+                      ontap: () {
+                        Navigator.pushNamed(context, popular_food_screen_route);
+                      },
                     ),
                     SizedBox(
                       height: 10.h,
@@ -325,6 +328,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SeeAllText(
                       text: "Homemade Foods",
+                      ontap: () {
+                        Navigator.pushNamed(context, home_food_screen_route);
+                      },
                     ),
                     SizedBox(
                       height: 10.h,

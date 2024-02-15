@@ -25,7 +25,11 @@ class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Order"),
+      backgroundColor: scaffoldColor,
+      appBar: CustomAppBar(
+        title: "Order",
+        secondicon: Icons.search,
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 20.sp,
@@ -41,7 +45,7 @@ class _OrderScreenState extends State<OrderScreen> {
               ),
             ),
             Text(
-              'To Recieve',
+              'Recieved',
               style: GoogleFonts.poppins(
                 fontSize: 16.sp,
                 // color: primarycolor,
@@ -49,7 +53,7 @@ class _OrderScreenState extends State<OrderScreen> {
               ),
             ),
             Text(
-              'To Cancle',
+              'Cancelled',
               style: GoogleFonts.poppins(
                 fontSize: 16.sp,
                 // color: primarycolor,

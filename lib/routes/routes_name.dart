@@ -33,6 +33,11 @@ const String food_detail_screen_one_route = "/food_detail_screen_one";
 const String review_screen_route = "/review_screen";
 const String rating_screen_route = "/rating_screen";
 const String invite_friends_screen_route = "/invite_friends_screen";
+const String popular_food_screen_route = "/popular_food_screen";
+const String home_food_screen_route = "/home_food_screen";
+const String track_order_screen_route = "/track_order_screen";
+const String delivery_boy_detail_screen_route = "/delivery_boy_detail_screen";
+const String favorite_screen_route = "/favorite_screen_route";
 
 //------------------Vendor Routes-----------------
 const String vender_login_screen_route = "/vendor_login_screen";

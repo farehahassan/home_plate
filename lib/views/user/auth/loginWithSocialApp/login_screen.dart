@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     InkWell(
                       onTap: () {
@@ -90,17 +90,31 @@ class _LoginScreenState extends State<LoginScreen> {
                           selectedButtonIndex = 0;
                         });
                       },
-                      child: Text(
-                        "User side",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18.sp,
-                          fontWeight: selectedButtonIndex == 0
-                              ? FontWeight.w600
-                              : FontWeight.w400,
-                          color: selectedButtonIndex == 0
-                              ? primarycolor
-                              : greyColor,
-                        ),
+                      child: Column(
+                        children: [
+                          Text(
+                            "User side",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18.sp,
+                              fontWeight: selectedButtonIndex == 0
+                                  ? FontWeight.w600
+                                  : FontWeight.w400,
+                              color: selectedButtonIndex == 0
+                                  ? primarycolor
+                                  : greyColor,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Container(
+                            width: 115.w,
+                            height: 2.h,
+                            color: selectedButtonIndex == 0
+                                ? primarycolor
+                                : greyColor,
+                          )
+                        ],
                       ),
                     ),
                     InkWell(
@@ -110,17 +124,31 @@ class _LoginScreenState extends State<LoginScreen> {
                           selectedButtonIndex = 1;
                         });
                       },
-                      child: Text(
-                        "Vendor side",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18.sp,
-                          fontWeight: selectedButtonIndex == 1
-                              ? FontWeight.w600
-                              : FontWeight.w400,
-                          color: selectedButtonIndex == 1
-                              ? primarycolor
-                              : greyColor,
-                        ),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Vendor side",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18.sp,
+                              fontWeight: selectedButtonIndex == 1
+                                  ? FontWeight.w600
+                                  : FontWeight.w400,
+                              color: selectedButtonIndex == 1
+                                  ? primarycolor
+                                  : greyColor,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Container(
+                            width: 115.w,
+                            height: 2.h,
+                            color: selectedButtonIndex == 1
+                                ? primarycolor
+                                : greyColor,
+                          )
+                        ],
                       ),
                     ),
                     InkWell(
@@ -130,17 +158,31 @@ class _LoginScreenState extends State<LoginScreen> {
                           selectedButtonIndex = 2;
                         });
                       },
-                      child: Text(
-                        "Rider side",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18.sp,
-                          fontWeight: selectedButtonIndex == 2
-                              ? FontWeight.w600
-                              : FontWeight.w400,
-                          color: selectedButtonIndex == 2
-                              ? primarycolor
-                              : greyColor,
-                        ),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Rider side",
+                            style: GoogleFonts.poppins(
+                              fontSize: 18.sp,
+                              fontWeight: selectedButtonIndex == 2
+                                  ? FontWeight.w600
+                                  : FontWeight.w400,
+                              color: selectedButtonIndex == 2
+                                  ? primarycolor
+                                  : greyColor,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          Container(
+                            width: 115.w,
+                            height: 2.h,
+                            color: selectedButtonIndex == 2
+                                ? primarycolor
+                                : greyColor,
+                          )
+                        ],
                       ),
                     ),
                   ],
@@ -165,26 +207,26 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 10.h,
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 110.w,
-                  height: 3.h,
-                  color: primarycolor,
-                ),
-                Container(
-                  width: 110.w,
-                  height: 3.h,
-                  color: primarycolor,
-                ),
-                Container(
-                  width: 110.w,
-                  height: 3.h,
-                  color: primarycolor,
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       width: 110.w,
+            //       height: 3.h,
+            //       color: primarycolor,
+            //     ),
+            //     Container(
+            //       width: 110.w,
+            //       height: 3.h,
+            //       color: primarycolor,
+            //     ),
+            //     Container(
+            //       width: 110.w,
+            //       height: 3.h,
+            //       color: primarycolor,
+            //     ),
+            //   ],
+            // ),
 
             // _buildDotIndicator(),
             SizedBox(

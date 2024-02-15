@@ -15,16 +15,21 @@ import 'package:home_plate/routes/routes_name.dart';
 import 'package:home_plate/views/user/auth/Signup/signup_screen.dart';
 import 'package:home_plate/views/user/cart/cart_screen.dart';
 import 'package:home_plate/views/user/checkout/checkout_screen.dart';
+import 'package:home_plate/views/user/deliveryboy/deliveryboy_detail_screen.dart';
+import 'package:home_plate/views/user/favorite/favorite_screen.dart';
 import 'package:home_plate/views/user/food_details/food_detail_screen.dart';
 import 'package:home_plate/views/user/food_details/food_detail_screen_two.dart';
 import 'package:home_plate/views/user/home/home_screen.dart';
 import 'package:home_plate/views/base/onboarding/onboard.dart';
 import 'package:home_plate/views/base/splash%20screen/splash_screen.dart';
 import 'package:home_plate/views/user/home/navbar.dart';
+import 'package:home_plate/views/user/homemade%20food/home_food_screen.dart';
 import 'package:home_plate/views/user/invitefriends/invite_friends_screen.dart';
 import 'package:home_plate/views/user/notification/notification_empty.dart';
 import 'package:home_plate/views/user/notification/notification_screen.dart';
+import 'package:home_plate/views/user/order/views/trackorder/track_order_screen.dart';
 import 'package:home_plate/views/user/payment_method/payment_method_screen.dart';
+import 'package:home_plate/views/user/popularfood/popular_food_screen.dart';
 import 'package:home_plate/views/user/profile/edit_profile.dart';
 import 'package:home_plate/views/user/rating/rating_screen.dart';
 import 'package:home_plate/views/user/review/review_screen.dart';
@@ -106,6 +111,17 @@ class CustomRouter {
         return MaterialPageRoute(builder: (_) => const RatingScreen());
       case invite_friends_screen_route:
         return MaterialPageRoute(builder: (_) => const InviteFriendsScreen());
+      case popular_food_screen_route:
+        return MaterialPageRoute(builder: (_) => const PopularFoodScreen());
+      case home_food_screen_route:
+        return MaterialPageRoute(builder: (_) => const HomeFoodScreen());
+      case track_order_screen_route:
+        return MaterialPageRoute(builder: (_) => const TrackOrderScreen());
+      case delivery_boy_detail_screen_route:
+        return MaterialPageRoute(
+            builder: (_) => const DeliveryBoyDetailScreen());
+      case favorite_screen_route:
+        return MaterialPageRoute(builder: (_) => const FavoriteScreen());
 
       //-----------------Vendor Routes----------------
       case vender_navbar_route:

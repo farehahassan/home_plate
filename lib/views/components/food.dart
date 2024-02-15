@@ -39,8 +39,10 @@ class _FoodState extends State<Food> {
       child: Container(
         margin: EdgeInsets.only(
           bottom: 10.sp,
+          right: 10.sp,
+          // left: 7.sp,
         ),
-        width: 180.w,
+        width: 170.w,
         // height: 280.h,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -52,7 +54,7 @@ class _FoodState extends State<Food> {
           children: [
             Center(
               child: Container(
-                width: 156.w,
+                width: 150.w,
                 height: 146.h,
                 margin: EdgeInsets.only(top: 10.h),
                 decoration: BoxDecoration(

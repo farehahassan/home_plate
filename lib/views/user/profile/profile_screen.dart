@@ -139,7 +139,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: Color.fromRGBO(27, 172, 75, 0.1),
                   ),
                   ArrowCards(
-                    ontap: () {},
+                    ontap: () {
+                      Navigator.pushNamed(context, favorite_screen_route);
+                    },
                     settingname: "My Favorite",
                     svg: "assets/svgs/social/Heart.svg",
                     color: Color.fromRGBO(244, 67, 54, 0.10),
